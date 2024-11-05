@@ -1,0 +1,223 @@
+ERROR - 2024-11-05 00:00:50 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`paiements` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\app\Database\Migrations\2024-11-04-194225_Paiements.php(21): CodeIgniter\Database\Forge->createTable()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(867): App\Database\Migrations\Paiements->up()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2024-11-05 00:02:31 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`paiements` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\app\Database\Migrations\2024-11-04-194225_Paiements.php(21): CodeIgniter\Database\Forge->createTable()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(867): App\Database\Migrations\Paiements->up()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2024-11-05 09:01:18 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(232): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#13 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#14 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#15 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(232): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#13 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#14 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#15 {main}
+ERROR - 2024-11-05 09:01:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#13 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#14 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#15 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#13 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#14 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#15 {main}
+ERROR - 2024-11-05 09:02:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#11 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#12 {main}
+ERROR - 2024-11-05 09:11:55 --> mysqli_sql_exception: Table 'users' already exists in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\app\Database\Migrations\2024-11-04-194201_Users.php(23): CodeIgniter\Database\Forge->createTable()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(867): App\Database\Migrations\Users->up()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#13 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#14 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#15 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#16 {main}
+ERROR - 2024-11-05 09:12:06 --> mysqli_sql_exception: Table 'users' already exists in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\app\Database\Migrations\2024-11-04-194201_Users.php(23): CodeIgniter\Database\Forge->createTable()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(867): App\Database\Migrations\Users->up()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2024-11-05 15:45:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#11 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#12 {main}
+ERROR - 2024-11-05 16:07:40 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\app\Database\Migrations\2024-11-05-155629_CreateAdmins.php(16): CodeIgniter\Database\Forge->createTable()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateAdmins->up()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 C:\xampp\htdocs\Gestion-Hotel\spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}

@@ -11,7 +11,7 @@ class ClientModel extends UserModel
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nom', 'prenom', 'adresse','email','telephone'];
+    protected $allowedFields    = ['user_id','nom','prenom','adresse','telephone'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

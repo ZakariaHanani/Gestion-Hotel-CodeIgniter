@@ -5,6 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class ReservationModel extends Model
+
 {
     protected $table            = 'reservations';
     protected $primaryKey       = 'id';
@@ -12,7 +13,7 @@ class ReservationModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id','date_debut','date_fin','id_hotel','id_Client','id_Chambre'];
+    protected $allowedFields    = ['client_id','chambre_id','date_debut','date_fin'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
