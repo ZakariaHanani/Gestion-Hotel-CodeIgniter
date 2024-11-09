@@ -10,13 +10,13 @@ class CreateReservations extends Migration
     {
         $this->forge->addField([
             'id'            => ['type' => 'INT','constraint'=> 11, 'auto_increment' => true],
-            'client_id'     => ['type' => 'INT'],
-            'chambre_id'    => ['type' => 'INT'],
+            'client_id'     => ['type' => 'INT', 'constraint' => 11,'unsigned' => true, 'null' => false],
+            'chambre_id'    => ['type' => 'INT','constraint' => 11],
             'date_debut'    => ['type' => 'DATE'],
             'date_fin'      => ['type' => 'DATE'],
         ]);
         $this->forge->addPrimaryKey('id');
-        $this->forge->addForeignKey('client_id', 'clients', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('client_id', 'clients', 'user_id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('chambre_id', 'chambres', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('reservations');
 

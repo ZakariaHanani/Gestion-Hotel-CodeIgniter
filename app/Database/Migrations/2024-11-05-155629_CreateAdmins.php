@@ -9,16 +9,15 @@ class CreateAdmins extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id'          => ['type'=> 'INT','constraint'=> 11, 'auto_increment' => true],
-            'user_id'     => ['type' => 'INT'],
-            'permissions' => ['type' => 'TEXT','null' => true],
+            'user_id'     => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => false],
+            'permissions' => ['type' => 'TEXT', 'null' => true],
         ]);
-        $this->forge->addPrimaryKey('id');
-        $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE');
-        $this->forge->createTable('admins');
 
+        $this->forge->addKey('user_id');
+        $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE'); // Clé étrangère reliant `user_id` à `id` dans `users`
+        $this->forge->createTable('admins');
     }
-    
+
     public function down()
     {
         $this->forge->dropTable('admins');

@@ -12,7 +12,7 @@ class ChambreModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id','numero','type','prix','statut'];
+    protected $allowedFields    = ['numero','type','prix','statut'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

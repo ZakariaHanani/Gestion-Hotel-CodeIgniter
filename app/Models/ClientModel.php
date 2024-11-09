@@ -3,15 +3,15 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-class ClientModel extends UserModel
+class ClientModel extends Model
 {
     protected $table            = 'clients';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'user_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id','nom','prenom','adresse','telephone'];
+    protected $allowedFields    = ['user_id','nom','prenom','telephone','adresse','created_at','updated_at'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -20,7 +20,7 @@ class ClientModel extends UserModel
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps =true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

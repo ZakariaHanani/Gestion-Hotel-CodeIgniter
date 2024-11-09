@@ -12,7 +12,7 @@ class RapportModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['titre','description','type_rapport','donnees','created_at'];
+    protected $allowedFields    = ['id_rapport','contenu','created_at','updated_at'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
