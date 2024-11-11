@@ -1,5 +1,5 @@
 <?php
-
+// app/Models/ChambreModel.php
 namespace App\Models;
 
 use CodeIgniter\Model;
@@ -12,35 +12,24 @@ class ChambreModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['numero','type','prix','statut'];
+    protected $allowedFields    = ['numero', 'prix','description', 'statut', 'type_chambre_id'];
 
-    protected bool $allowEmptyInserts = false;
-    protected bool $updateOnlyChanged = true;
+    public function getChambreById($id)
+    {
+        return $this->where('id', $id)->first();
+    }
 
-    protected array $casts = [];
-    protected array $castHandlers = [];
-
-    // Dates
-    protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
-
-    // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
-    protected $skipValidation       = false;
-    protected $cleanValidationRules = true;
-
-    // Callbacks
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
+    public function getWithType($id = null)
+    {
+        if ($id) {
+            return $this->select('chambres.*, type_chambre.nom as type_nom, type_chambre.description as type_description')
+                        ->join('type_chambre', 'type_chambre.id = chambres.type_chambre_id')
+                        ->where('chambres.id', $id)
+                        ->first();
+        } else {
+            return $this->select('chambres.*, type_chambre.nom as type_nom, type_chambre.description as type_description')
+                        ->join('type_chambre', 'type_chambre.id = chambres.type_chambre_id')
+                        ->findAll(); 
+        }
+    }
 }

@@ -10,11 +10,11 @@ class CreateChambres extends Migration
     {
             $this->forge->addField([
                 'id'        => ['type' => 'INT','constraint'=> 11, 'auto_increment' => true],
-                'numero'    => ['type' => 'VARCHAR','constraint' => 10],
+                'numero'    => ['type' => 'VARCHAR','constraint' => 10, 'unique' => true] ,
                 'type'      => ['type' => 'VARCHAR','constraint' => 100],
                 'prix'      => ['type' => 'FLOAT'],
+                'description'=>['type' => 'TEXT' ,'null'=> true] ,
                 'statut'    => ['type' => 'ENUM', 'constraint' => ['disponible', 'occupe'], 'default' => 'disponible']
-                
             ]
             );
 
