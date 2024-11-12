@@ -6,7 +6,7 @@
 
 
     <label for="numero">Numéro de Chambre</label>
-    <input type="text" name="numero" id="numero" required><br>
+    <input type="number" name="numero" id="numero" required><br>
 
     <label for="description">Description :</label>
     <textarea name="description" id="description" rows="4" placeholder="Entrez la description de la chambre ici..."></textarea><br>
@@ -29,3 +29,15 @@
 
     <button type="submit">Ajouter Chambre</button>
 </form>
+
+<script>
+function validateForm() {
+    const prix = document.getElementById('prix').value;
+
+    if (isNaN(prix) || prix <= 0) {
+        alert("Le prix doit être un nombre positif.");
+        return false;
+    }
+    return true;
+}
+</script>

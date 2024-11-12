@@ -73,3 +73,5 @@ in APPPATH\Views\Admin\chambres\index.php on line 15.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-11 19:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 19:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

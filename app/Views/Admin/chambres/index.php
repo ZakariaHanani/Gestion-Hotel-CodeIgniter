@@ -27,3 +27,6 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<a href="/admin/chambres/create" >Ajouter </a> |
+

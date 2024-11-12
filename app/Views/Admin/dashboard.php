@@ -2,24 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Dashboard</title>
-    <!-- Add styles and scripts here -->
+    <title>Tableau de Bord</title>
 </head>
 <body>
-    <header>
-        <h1>Admin Dashboard</h1>
-        <p>Welcome to the hotel management system</p>
-    </header>
-
-    <section id="overview">
-        <h2>Overview</h2>
-        <div>
-            <p>Total Reservations: <?= $totalReservations ?></p>
-            <p>Available Rooms: <?= $availableRooms ?></p>
-            <p>Total Revenue: <?= $totalRevenue ?></p>
-            <p>Pending Payments: <?= $pendingPayments ?></p>
+    <h1>Tableau de Bord de l'Administration</h1>
+    
+    <div class="stats">
+        <div class="stat-card">
+            <h3>Nombre Total de Chambres</h3>
+            <p><?= esc($totalChambres); ?></p>
         </div>
-    </section>
+        <div class="stat-card">
+            <h3>Nombre Total de Réservations</h3>
+            <p><?= esc($totalReservations); ?></p>
+        </div>
+        <div class="stat-card">
+            <h3>Nombre Total de Clients</h3>
+            <p><?= esc($totalClients); ?></p>
+        </div>
+    </div>
+
+    <h2>Réservations Récentes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Réservation</th>
+                <th>Client</th>
+                <th>Chambre</th>
+                <th>Date de Réservation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($reservationsRecents as $reservation): ?>
+                <tr>
+                    <td><?= esc($reservation['id']); ?></td>
+                    <td><?= esc($reservation['client_id']); ?></td>
+                    <td><?= esc($reservation['chambre_id']); ?></td>
+                    <td><?= esc($reservation['created_at']); ?></td> 
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 
     <section id="navigation">
         <h2>Navigation</h2>

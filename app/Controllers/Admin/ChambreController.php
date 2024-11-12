@@ -23,6 +23,22 @@ class ChambreController extends BaseController
 
     public function store()
     {
+
+
+        $rules = [
+            'numero' => 'required|integer',
+            'prix' => 'required|decimal',
+            'description' => 'permit_empty|string',
+            'statut' => 'required|in_list[disponible,indisponible]',
+            'type_chambre_id' => 'required|integer'
+        ];
+    
+        if (!$this->validate($rules)) {
+            // Affichez les erreurs de validation
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+
         if (($this->request->getMethod() === 'POST')) {
             $chambreModel = new ChambreModel();
             $data = [
@@ -55,7 +71,6 @@ class ChambreController extends BaseController
         if ($this->request->getMethod() === 'POST') {
             $chambreModel = new ChambreModel();
 
-            // Récupérer les données du formulaire
             $data = [
                 'numero' => $this->request->getPost('numero'),
                 'prix' => $this->request->getPost('prix'),
@@ -64,7 +79,6 @@ class ChambreController extends BaseController
                 'type_chambre_id' => $this->request->getPost('type_chambre_id'),
             ];
 
-            // Mettre à jour la chambre en base de données
             $chambreModel->update($id, $data);
             return redirect()->to('/admin/chambres');
         }

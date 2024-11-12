@@ -18,7 +18,7 @@ $routes->get('/logout', 'AuthController::logout');
 
 $routes->group('admin', function($routes) {
 
-    $routes->get('dashboard', 'AdminController::dashboard');
+    $routes->get('dashboard', 'Admin\AdminController::dashboard');
 
     // Routes pour les réservations
     $routes->get('reservations', 'Admin\ReservationController::index');
