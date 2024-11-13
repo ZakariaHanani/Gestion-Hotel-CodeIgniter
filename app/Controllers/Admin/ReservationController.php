@@ -48,8 +48,11 @@ class ReservationController extends Controller
             'date_fin' => $this->request->getPost('date_fin'),
         ]);
 
+        
         return redirect()->to('/admin/reservations')->with('message', 'Réservation créée avec succès');
     }
+
+    
 
     public function edit($id)
     {
@@ -58,5 +61,27 @@ class ReservationController extends Controller
         $data['chambres'] = $this->chambreModel->findAll();
 
         return view('admin/reservations/edit', $data);
+    }
+
+    public function update($id)
+    {
+        if ($this->request->getMethod() === 'POST') {        
+            $data = [
+                'client_id' => $this->request->getPost('client_id'),
+                'chambre_id' => $this->request->getPost('chambre_id'),
+                'date_debut' => $this->request->getPost('date_debut'),
+                'date_fin' => $this->request->getPost('date_fin'),
+            ];
+
+            $this->reservationModel->update($id, $data);
+            return redirect()->to('/admin/reservations')->with('message', 'Réservation mise a jour avec succès');
+        }
+    }
+
+
+    public function delete($id)
+    {
+        $this->reservationModel->delete($id);
+        return redirect()->to('/admin/reservations');
     }
 }

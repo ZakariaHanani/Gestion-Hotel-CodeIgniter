@@ -25,6 +25,8 @@ $routes->group('admin', function($routes) {
     $routes->get('reservations/create', 'Admin\ReservationController::create');
     $routes->post('reservations/store', 'Admin\ReservationController::store');
     $routes->get('reservations/delete/(:num)', 'Admin\ReservationController::delete/$1');
+    $routes->get('reservations/edit/(:num)', 'Admin\ReservationController::edit/$1');
+    $routes->post('reservations/update/(:num)', 'Admin\ReservationController::update/$1');
 
      // Routes pour les paiements
      $routes->get('paiements', 'Admin\PaiementController::index');

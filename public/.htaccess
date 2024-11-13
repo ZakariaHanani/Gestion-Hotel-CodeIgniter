@@ -15,6 +15,9 @@ Options -Indexes
 	# change the following line to match the subfolder you need.
 	# http://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
 	# RewriteBase /
+	RewriteCond %{REQUEST_URI} !^/public/template/
+	RewriteCond %{REQUEST_URI} !^/public/plugins/
+
 
 	# Redirect Trailing Slashes...
 	RewriteCond %{REQUEST_FILENAME} !-d
@@ -36,6 +39,12 @@ Options -Indexes
 	# Ensure Authorization header is passed along
 	RewriteCond %{HTTP:Authorization} .
 	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+	
+    RewriteBase /
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+
 </IfModule>
 
 <IfModule !mod_rewrite.c>

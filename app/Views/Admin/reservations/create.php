@@ -4,9 +4,21 @@
     <title>Nouvelle Réservation</title>
 </head>
 <body>
-    <h1>Créer une Nouvelle Réservation</h1>
-    
-    <form action="<?= site_url('admin/reservations/store') ?>" method="post">
+<?= $this->extend('layouts/Admin') ?>
+
+<?= $this->section('content') ?>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Créer une Nouvelle Réservation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <form action="<?= site_url('admin/reservations/store') ?>" method="post">
         <label for="client_id">Client:</label>
         <select name="client_id" id="client_id" required>
             <?php foreach ($clients as $client): ?>
@@ -29,7 +41,8 @@
 
         <button type="submit">Enregistrer</button>
     </form>
-
-    <a href="<?= site_url('admin/reservations') ?>">Retour à la liste des réservations</a>
+    </div>
+</div>
+<?= $this->endSection() ?>
 </body>
 </html>

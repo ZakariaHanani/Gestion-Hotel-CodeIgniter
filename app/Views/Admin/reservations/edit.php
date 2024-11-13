@@ -6,7 +6,7 @@
 <body>
     <h1>Modifier Réservation</h1>
 
-    <form action="<?= site_url('admin/reservations/update/' . $reservation['id']) ?>" method="post">
+    <form action="/admin/reservations/update/<?= $reservation['id'] ?>" method="post">
         <label for="client_id">Client:</label>
         <select name="client_id" id="client_id" required>
             <?php foreach ($clients as $client): ?>
