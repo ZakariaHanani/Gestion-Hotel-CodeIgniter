@@ -17,8 +17,14 @@ $routes->get('/logout', 'AuthController::logout');
 
 
 $routes->group('admin', function($routes) {
-
+    //Main Routes
+    $routes->get('/','Admin\AdminController::dashboard');
     $routes->get('dashboard', 'Admin\AdminController::dashboard');
+
+    //Profil
+    $routes->get('profile','Admin\AdminController::profile');
+
+
 
     // Routes pour les réservations
     $routes->get('reservations', 'Admin\ReservationController::index');
@@ -39,6 +45,19 @@ $routes->group('admin', function($routes) {
     $routes->get('clients/create', 'Admin\ClientController::create');
     $routes->post('clients/store', 'Admin\ClientController::store');
     $routes->get('clients/delete/(:num)', 'Admin\ClientController::delete/$1');
+    $routes->get('clients/edit/(:num)', 'Admin\ClientController::edit/$1');
+    $routes->post('clients/update/(:num)', 'Admin\ClientController::update/$1');
+
+
+
+
+
+
+
+
+
+
+
 
     // Routes pour les chambres
     $routes->get('chambres', 'Admin\ChambreController::index');
@@ -48,4 +67,7 @@ $routes->group('admin', function($routes) {
     $routes->get('chambres/edit/(:num)', 'Admin\ChambreController::edit/$1');
     $routes->post('chambres/update/(:num)', 'Admin\ChambreController::update/$1');
     $routes->get('chambres/delete/(:num)', 'Admin\ChambreController::delete/$1');
+
+    // Routes pour les rapports
+    $routes->get('rapport', 'Admin\RapportController::index');
 });

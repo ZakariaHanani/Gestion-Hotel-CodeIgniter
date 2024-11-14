@@ -1,23 +1,23 @@
-
+<?php
+/**
+ * @var CodeIgniter\View\View $this
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    
     <link rel="stylesheet" href="<?= base_url('template/dist/css/adminlte.min.css') ?>">
-
-   
-    <link rel="stylesheet" href="<?= base_url('template/plugins/fontawesome-free/css/all.min.css') ?>">
-    
-   
+    <link rel="stylesheet" href="<?= base_url('template/plugins/fontawesome-free/css/all.min.css') ?>">  
 </head>
 <body class="hold-transition sidebar-mini">
 
 <div class="wrapper">
+    <?= $this->include('partials/navbar') ; ?>
     <?= $this->include('partials/sidebar') ?>
-    <?= $this->include('partials/navbar') ?>
+    
 
     <!-- Content Wrapper -->
     <div class="content-wrapper">

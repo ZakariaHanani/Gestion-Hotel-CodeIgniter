@@ -1,45 +1,43 @@
 <?php
-
 namespace App\Models;
 
-use CodeIgniter\Model;
-class ClientModel extends Model
+class ClientModel extends UserModel
 {
     protected $table            = 'clients';
     protected $primaryKey       = 'user_id';
-    protected $useAutoIncrement = true;
+    protected $useAutoIncrement = false; 
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id','nom','prenom','telephone','adresse','created_at','updated_at'];
+    protected $allowedFields    = ['user_id', 'nom', 'prenom', 'telephone', 'adresse', 'created_at', 'updated_at'];
 
-    protected bool $allowEmptyInserts = false;
-    protected bool $updateOnlyChanged = true;
-
-    protected array $casts = [];
-    protected array $castHandlers = [];
+    public function getClientProfile($clientId)
+    {
+        return $this->select('clients.*, users.*')
+                    ->join('users', 'users.id = clients.user_id')
+                    ->where('clients.user_id', $clientId) 
+                    ->first();
+    }
 
     // Dates
-    protected $useTimestamps =true;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    // Validation
+    // Validation and Callbacks
     protected $validationRules      = [];
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
-
-    // Callbacks
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
+    protected $allowCallbacks       = true;
+    protected $beforeInsert         = [];
+    protected $afterInsert          = [];
+    protected $beforeUpdate         = [];
+    protected $afterUpdate          = [];
+    protected $beforeFind           = [];
+    protected $afterFind            = [];
+    protected $beforeDelete         = [];
+    protected $afterDelete          = [];
 }

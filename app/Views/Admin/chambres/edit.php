@@ -1,6 +1,30 @@
-<h1>Modifier une Chambre</h1>
-
-<form action="/admin/chambres/update/<?= $chambre['id'] ?>" method="post">
+<?php
+/**
+ * @var CodeIgniter\View\View $this
+*/
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier une chambre</title>
+</head>
+<body>
+<?= $this->extend('layouts/Admin') ?>
+    <?= $this->section('content') ?>
+    <div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Modifier une chambre</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid">
+    <form action="/admin/chambres/update/<?= $chambre['id'] ?>" method="post">
     <label for="numero">Numéro de Chambre</label>
     <input type="text" name="numero" id="numero" value="<?= $chambre['numero'] ?>" required><br>
 
@@ -27,3 +51,9 @@
 
     <button type="submit">Mettre à jour</button>
 </form>
+</div>
+</div>
+    <?= $this->endSection() ?>
+</body>
+</html>
+

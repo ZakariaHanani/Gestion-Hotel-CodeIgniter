@@ -1,0 +1,649 @@
+INFO - 2024-11-14 15:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 16:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 16:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 16:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 16:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-14 16:27:52 --> mysqli_sql_exception: Unknown column 'admins.id' in 'where clause' in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Gestion-Hotel\app\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Gestion-Hotel\app\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp\htdocs\Gestion-Hotel\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp\htdocs\Gestion-Hotel\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2024-11-14 16:27:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'admins.id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 16:27:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'admins.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 16:27:52 --> [Caused by] mysqli_sql_exception: Unknown column 'admins.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+ERROR - 2024-11-14 16:28:30 --> mysqli_sql_exception: Unknown column 'user.id' in 'on clause' in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Gestion-Hotel\app\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Gestion-Hotel\app\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp\htdocs\Gestion-Hotel\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp\htdocs\Gestion-Hotel\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2024-11-14 16:28:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id' in 'on clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 16:28:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 16:28:30 --> [Caused by] mysqli_sql_exception: Unknown column 'user.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\AdminModel.php(23): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Admin\AdminController.php(32): App\Models\AdminModel->getAdminProfile()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 16:28:46 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin/profile]
+in APPPATH\Views\Admin\profile.php on line 14.
+ 1 APPPATH\Views\Admin\profile.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\profile.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(33): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-14 16:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 18:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-14 18:48:33 --> ErrorException: Undefined array key "nombre_reseravtions"
+[Method: GET, Route: admin/clients]
+in APPPATH\Views\Admin\Clients\index.php on line 19.
+ 1 APPPATH\Views\Admin\Clients\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 18:48:59 --> ErrorException: Undefined array key "nombre_reseravtions"
+[Method: GET, Route: admin/clients]
+in APPPATH\Views\Admin\Clients\index.php on line 19.
+ 1 APPPATH\Views\Admin\Clients\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 18:50:55 --> ErrorException: Undefined array key "nombre_reseravtions"
+[Method: GET, Route: admin/clients]
+in APPPATH\Views\Admin\Clients\index.php on line 19.
+ 1 APPPATH\Views\Admin\Clients\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 18:50:59 --> ErrorException: Undefined array key "nombre_reseravtions"
+[Method: GET, Route: admin/clients]
+in APPPATH\Views\Admin\Clients\index.php on line 19.
+ 1 APPPATH\Views\Admin\Clients\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 18:52:57 --> ErrorException: Undefined array key "nombre_reseravtions"
+[Method: GET, Route: admin/clients]
+in APPPATH\Views\Admin\Clients\index.php on line 19.
+ 1 APPPATH\Views\Admin\Clients\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 18:53:02 --> ErrorException: Undefined array key "nombre_reseravtions"
+[Method: GET, Route: admin/clients]
+in APPPATH\Views\Admin\Clients\index.php on line 19.
+ 1 APPPATH\Views\Admin\Clients\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:06:27 --> ErrorException: Undefined array key "user_id"
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 24.
+ 1 APPPATH\Controllers\Admin\ClientController.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:12:26 --> ErrorException: Undefined array key "user_id"
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 25.
+ 1 APPPATH\Controllers\Admin\ClientController.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:12:42 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 25.
+ 1 APPPATH\Controllers\Admin\ClientController.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:16:45 --> ErrorException: Attempt to read property "user_id" on array
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 26.
+ 1 APPPATH\Controllers\Admin\ClientController.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:18:25 --> ErrorException: Undefined array key "clients"
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 23.
+ 1 APPPATH\Controllers\Admin\ClientController.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:19:17 --> ErrorException: Undefined array key "clients"
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 23.
+ 1 APPPATH\Controllers\Admin\ClientController.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:22:29 --> ErrorException: Undefined array key "clients"
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 23.
+ 1 APPPATH\Controllers\Admin\ClientController.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:22:40 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: admin/clients]
+in APPPATH\Controllers\Admin\ClientController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:23:02 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/clients]
+in APPPATH\Views\Admin\Clients\index.php on line 21.
+ 1 APPPATH\Views\Admin\Clients\index.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:26:32 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin/clients/edit/2]
+in APPPATH\Views\Admin\Clients\edit.php on line 11.
+ 1 APPPATH\Views\Admin\Clients\edit.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(59): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:39:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "clients/create.php"
+[Method: POST, Route: admin/clients/store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\ClientController.php(65): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:41:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "clients/create.php"
+[Method: POST, Route: admin/clients/store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\ClientController.php(65): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:47:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "clients/create.php"
+[Method: POST, Route: admin/clients/store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\ClientController.php(65): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:48:56 --> ErrorException: Undefined variable $types_chambre
+[Method: POST, Route: admin/clients/store]
+in APPPATH\Views\Admin\chambres\create.php on line 43.
+ 1 APPPATH\Views\Admin\chambres\create.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\chambres\\create.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(65): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:52:39 --> Error: Call to undefined function set_value()
+[Method: GET, Route: admin/clients/create]
+in APPPATH\Views\Admin\Clients\create.php on line 17.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\Admin\ClientController.php(44): view()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+DEBUG - 2024-11-14 19:58:28 --> ID utilisateur : 3
+ERROR - 2024-11-14 19:58:28 --> mysqli_sql_exception: Column 'adresse' cannot be null in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\Gestion-Hotel\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\Gestion-Hotel\app\Controllers\Admin\ClientController.php(83): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp\htdocs\Gestion-Hotel\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp\htdocs\Gestion-Hotel\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2024-11-14 19:58:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'adresse' cannot be null
+[Method: POST, Route: admin/clients/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH\Controllers\Admin\ClientController.php(83): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:58:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'adresse' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH\Controllers\Admin\ClientController.php(83): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 19:58:28 --> [Caused by] mysqli_sql_exception: Column 'adresse' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\Admin\ClientController.php(83): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+DEBUG - 2024-11-14 20:04:40 --> ID utilisateur : 4
+ERROR - 2024-11-14 20:04:40 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-14 20:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-14 20:07:22 --> ID utilisateur : 5
+ERROR - 2024-11-14 20:07:22 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-14 20:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-14 20:09:13 --> ID utilisateur : 6
+ERROR - 2024-11-14 20:09:13 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-14 20:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-14 20:16:40 --> ID utilisateur : 7
+ERROR - 2024-11-14 20:16:40 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-14 20:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-14 20:23:22 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'admin"
+[Method: POST, Route: admin/clients/%27admin/clients/store]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+DEBUG - 2024-11-14 20:25:05 --> ID utilisateur : 8
+ERROR - 2024-11-14 20:25:05 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-14 20:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-14 20:30:20 --> ID utilisateur : 9
+ERROR - 2024-11-14 20:30:20 --> Erreur lors de l'insertion dans la table clients.
+CRITICAL - 2024-11-14 20:30:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/.php"
+[Method: POST, Route: admin/clients/store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\ClientController.php(95): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+DEBUG - 2024-11-14 20:31:03 --> ID utilisateur : 10
+ERROR - 2024-11-14 20:31:03 --> Erreur lors de l'insertion dans la table clients.
+CRITICAL - 2024-11-14 20:31:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/.php"
+[Method: POST, Route: admin/clients/store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\ClientController.php(95): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+DEBUG - 2024-11-14 20:31:45 --> ID utilisateur : 11
+ERROR - 2024-11-14 20:31:45 --> Erreur lors de l'insertion dans la table clients.
+CRITICAL - 2024-11-14 20:31:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/.php"
+[Method: POST, Route: admin/clients/store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\ClientController.php(95): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+DEBUG - 2024-11-14 20:33:50 --> ID utilisateur : 12
+ERROR - 2024-11-14 20:33:50 --> Erreur lors de l'insertion dans la table clients.
+DEBUG - 2024-11-14 20:38:03 --> ID utilisateur : 13
+ERROR - 2024-11-14 20:38:03 --> Erreur lors de l'insertion dans la table clients.
+DEBUG - 2024-11-14 20:46:11 --> ID utilisateur : 14
+ERROR - 2024-11-14 20:46:11 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-14 20:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-14 20:53:28 --> ID utilisateur : 15
+ERROR - 2024-11-14 20:53:28 --> Erreur lors de l'insertion dans la table clients: []
+INFO - 2024-11-14 20:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 20:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-14 21:04:19 --> ID utilisateur : 16
+INFO - 2024-11-14 21:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-14 21:04:51 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin/clients/edit/8]
+in APPPATH\Views\Admin\Clients\edit.php on line 11.
+ 1 APPPATH\Views\Admin\Clients\edit.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(111): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-14 21:09:42 --> ErrorException: Undefined array key "email"
+[Method: GET, Route: admin/clients/edit/8]
+in APPPATH\Views\Admin\Clients\edit.php on line 26.
+ 1 APPPATH\Views\Admin\Clients\edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\Clients\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\ClientController.php(111): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ClientController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-14 21:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-14 21:13:51 --> ID utilisateur : 17
+INFO - 2024-11-14 21:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 21:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

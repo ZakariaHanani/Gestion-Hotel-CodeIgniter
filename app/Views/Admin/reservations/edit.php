@@ -4,9 +4,20 @@
     <title>Modifier Réservation</title>
 </head>
 <body>
-    <h1>Modifier Réservation</h1>
-
-    <form action="/admin/reservations/update/<?= $reservation['id'] ?>" method="post">
+    <?= $this->extend('layouts/Admin') ?>
+    <?= $this->section('content') ?>
+    <div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Modifier Réservation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <form action="/admin/reservations/update/<?= $reservation['id'] ?>" method="post">
         <label for="client_id">Client:</label>
         <select name="client_id" id="client_id" required>
             <?php foreach ($clients as $client): ?>
@@ -28,8 +39,10 @@
         <input type="date" name="date_fin" id="date_fin" value="<?= $reservation['date_fin'] ?>" required>
 
         <button type="submit">Mettre à jour</button>
-    </form>
-
-    <a href="<?= site_url('admin/reservations') ?>">Retour à la liste des réservations</a>
+        </form>
+        <a href="<?= site_url('admin/reservations') ?>">Retour à la liste des réservations</a>
+    </div>
+</div>
+    <?= $this->endSection() ?>
 </body>
 </html>

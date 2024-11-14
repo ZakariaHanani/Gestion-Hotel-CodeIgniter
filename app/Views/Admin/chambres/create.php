@@ -1,7 +1,25 @@
-<!-- app/Views/chambres/create.php -->
-<h1>Ajouter une Chambre</h1>
-
-<form action="/admin/chambres/store" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une Chambre</title>
+</head>
+<body>
+    <?= $this->extend('layouts/Admin') ?>
+    <?= $this->section('content') ?>
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Ajouter une chambre</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="content">
+    <div class="container-fluid">
+   <form action="/admin/chambres/store" method="post">
 <?= csrf_field() ?>
 
 
@@ -29,6 +47,21 @@
 
     <button type="submit">Ajouter Chambre</button>
 </form>
+</div>
+</div>
+    <?= $this->endSection() ?>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 function validateForm() {
@@ -41,3 +74,13 @@ function validateForm() {
     return true;
 }
 </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

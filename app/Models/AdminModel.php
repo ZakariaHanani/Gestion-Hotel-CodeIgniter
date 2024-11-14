@@ -14,6 +14,15 @@ class AdminModel extends UserModel
     protected $protectFields    = true;
     protected $allowedFields    = ['user_id','permissions'];
 
+
+    public function getAdminProfile($adminId)
+    {
+        return $this->select('admins.*, users.*')
+                    ->join('users', 'users.id = admins.user_id')
+                    ->where('admins.user_id', $adminId)
+                    ->first();
+    }
+
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
 

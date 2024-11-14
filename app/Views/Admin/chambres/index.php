@@ -1,7 +1,25 @@
-<!-- app/Views/Admin/chambres/index.php -->
-<h1>Liste des Chambres</h1>
-
-<table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+<?= $this->extend('layouts/Admin') ?>
+    <?= $this->section('content') ?>
+    <div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Liste des chambres</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid">
+    <table>
     <thead>
         <tr>
             <th>Numéro de Chambre</th>
@@ -27,6 +45,15 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+<a href="/admin/chambres/create" >Ajouter </a> 
 
-<a href="/admin/chambres/create" >Ajouter </a> |
+</div>
+</div>
+    <?= $this->endSection() ?>
+
+
+</body>
+</html>
+
+
 

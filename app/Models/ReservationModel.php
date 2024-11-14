@@ -15,6 +15,10 @@ class ReservationModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = ['client_id','chambre_id','date_debut','date_fin'];
 
+    public function countReservationsByClient($clientId)
+{
+    return $this->where('client_id', $clientId)->countAllResults();
+}
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
 
