@@ -12,7 +12,6 @@
 <body>
 
 <?= $this->extend('layouts/Admin') ?>
-
 <?= $this->section('content') ?>
 <div class="content-header">
     <div class="container-fluid">
@@ -39,16 +38,19 @@
                 <th>Chambre</th>
                 <th>Date Début</th>
                 <th>Date Fin</th>
+                <th>Statut</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($reservations as $reservation): ?>
                 <tr>
-                    <td><?= $reservation['client']['nom'] ?? 'Client inconnu' ?></td>
+                    <td><?= $reservation['client']['nom'] .' '. $reservation['client']['prenom'] ?? 'Client inconnu' ?></td>
                     <td><?= $reservation['chambre']['numero'] ?? 'Chambre inconnue' ?></td>
                     <td><?= $reservation['date_debut'] ?></td>
                     <td><?= $reservation['date_fin'] ?></td>
+                    <td><?= $reservation['statut'] ?></td>
+
                     <td>
                         <a href="<?= site_url('admin/reservations/edit/' . $reservation['id']) ?>">Modifier</a> |
                         <a href="<?= site_url('admin/reservations/delete/' . $reservation['id']) ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette réservation ?')">Supprimer</a>

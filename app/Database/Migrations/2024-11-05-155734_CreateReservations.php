@@ -6,7 +6,8 @@ use CodeIgniter\Database\Migration;
 class CreateReservations extends Migration
 {
     public function up()
-    {
+    {  
+
         $this->forge->addField([
             'id'            => ['type' => 'INT', 'constraint' => 11, 'auto_increment' => true],
             'client_id'     => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => false],

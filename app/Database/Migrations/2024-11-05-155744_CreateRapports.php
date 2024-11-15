@@ -11,10 +11,10 @@ class CreateRapports extends Migration
         
     $this->forge->addField([
         'id'             => ['type' => 'INT','constraint'=> 11, 'auto_increment' => true],
-        'titre'          => ['type' => 'VARCHAR', 'constraint' => 255], // Ex : "Rapport de fin de mois"
-        'description'    => ['type' => 'TEXT', 'null' => true],         // Des détails sur le rapport
+        'titre'          => ['type' => 'VARCHAR', 'constraint' => 255], 
+        'description'    => ['type' => 'TEXT', 'null' => true],        
         'type_rapport'   => ['type' => 'ENUM', 'constraint' => ['mensuel', 'annuel', 'journalier', 'personnalise']],
-        'donnees'        => ['type' => 'TEXT', 'null' => true],         // JSON ou texte pour stocker les données du rapport
+        'donnees'        => ['type' => 'TEXT', 'null' => true],      
         'created_at'     => ['type' => 'DATETIME', 'null' => true],
     ]);
     $this->forge->addPrimaryKey('id');

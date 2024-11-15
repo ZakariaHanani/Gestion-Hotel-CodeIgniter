@@ -13,7 +13,7 @@ class ReservationModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['client_id','chambre_id','date_debut','date_fin'];
+    protected $allowedFields    = ['client_id','chambre_id','date_debut','date_fin','statut'];
 
     public function countReservationsByClient($clientId)
 {

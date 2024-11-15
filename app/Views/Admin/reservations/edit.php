@@ -21,7 +21,7 @@
         <label for="client_id">Client:</label>
         <select name="client_id" id="client_id" required>
             <?php foreach ($clients as $client): ?>
-                <option value="<?= $client['user_id'] ?>" <?= ($client['user_id'] == $reservation['client_id']) ? 'selected' : '' ?>><?= $client['nom'] ?></option>
+                <option value="<?= $client['user_id'] ?>" <?= ($client['user_id'] == $reservation['client_id']) ? 'selected' : '' ?>><?= $client['nom'] ?>  <?= $client['prenom'] ?></option>
             <?php endforeach; ?>
         </select>
 
@@ -37,6 +37,14 @@
 
         <label for="date_fin">Date Fin:</label>
         <input type="date" name="date_fin" id="date_fin" value="<?= $reservation['date_fin'] ?>" required>
+
+        <label for="statut">Statut :</label>
+        <select name="statut" id="statut" required>
+        <option value="en attente" <?= isset($reservation) && $reservation['statut'] == 'en attente' ? 'selected' : '' ?>>En attente</option>
+        <option value="confirmée" <?= isset($reservation) && $reservation['statut'] == 'confirmée' ? 'selected' : '' ?>>Confirmée</option>
+        <option value="annulée" <?= isset($reservation) && $reservation['statut'] == 'annulée' ? 'selected' : '' ?>>Terminée</option>
+        <option value="annulée" <?= isset($reservation) && $reservation['statut'] == 'annulée' ? 'selected' : '' ?>>Annulée</option>
+        </select><br>
 
         <button type="submit">Mettre à jour</button>
         </form>
