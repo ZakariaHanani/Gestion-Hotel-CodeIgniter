@@ -18,6 +18,11 @@ class ChambreModel extends Model
     {
         return $this->where('id', $id)->first();
     }
+    public function getDisponibleChambre(){
+        return $this->select('chambres.*')
+                    ->where('chambres.statut', 'disponible')
+                    ->findAll(); 
+    }
 
     public function getWithType($id = null)
     {
@@ -31,5 +36,12 @@ class ChambreModel extends Model
                         ->join('type_chambre', 'type_chambre.id = chambres.type_chambre_id')
                         ->findAll(); 
         }
+    }
+
+    public function getImages($chambreId)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('images');
+        return $builder->where('chambre_id', $chambreId)->get()->getResultArray();
     }
 }

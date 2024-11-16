@@ -6,24 +6,48 @@ use App\Models\AdminModel;
 use App\Models\ReservationModel;
 use App\Models\ChambreModel;
 use App\Models\ClientModel;
-use App\Models\UserModel;
+use App\Models\RapportModel ;
 
 class AdminController extends BaseController {
+
+    protected $clientModel;
+    protected $chambreModel;
+    protected $reservationModel;
+    protected $reportModel;
+
+    public function __construct()
+    {
+        $this->clientModel = new ClientModel();
+        $this->chambreModel = new ChambreModel();
+        $this->reservationModel = new ReservationModel();
+        $this->reportModel = new RapportModel(); 
+    }
     
         public function dashboard(){
 
-        $chambreModel = new ChambreModel();
-        $reservationModel = new ReservationModel();
-        $clientModel = new ClientModel();
-
+        
+        $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        $reservationData = $this->getMonthlyReservationData();
         $data = [
-            'totalChambres' => $chambreModel->countAll(), 
-            'totalReservations' => $reservationModel->countAll(), 
-            'totalClients' => $clientModel->countAll(), 
-            'reservationsRecents' => $reservationModel->orderBy('created_at', 'desc')->findAll(5), 
+            'months' => $months,
+            'reservationData' => $reservationData,
+            'totalChambres' => $this->chambreModel->countAllResults(), 
+            'disponibleChambres'=>$this->chambreModel->where('statut' ,'disponible')->countAllResults(),
+            'totalReservations' => $this->reservationModel->countAllResults(), 
+            'totalClients' => $this->clientModel->countAllResults(), 
+            'activeReservations' => $this->reservationModel->where('statut !=','terminée')->countAllResults(),
         ];
-
         return view('admin/dashboard', $data);
+        }
+        private function getMonthlyReservationData()
+        {
+            $data = [];
+            for ($i = 1; $i <= 12; $i++) {
+                $data[] = $this->reservationModel
+                    ->where('MONTH(date_debut)', $i)
+                    ->countAllResults(); 
+            }
+            return $data;
         }
 
         public function profile($adminId = 1)

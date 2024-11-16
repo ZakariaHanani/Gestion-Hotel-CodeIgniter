@@ -35,10 +35,11 @@ $routes->group('admin', function($routes) {
     $routes->post('reservations/update/(:num)', 'Admin\ReservationController::update/$1');
 
      // Routes pour les paiements
-     $routes->get('paiements', 'Admin\PaiementController::index');
-     $routes->get('paiements/create', 'Admin\PaiementController::create');
-     $routes->post('paiements/store', 'Admin\PaiementController::store');
-     $routes->get('paiements/delete/(:num)', 'Admin\PaiementController::delete/$1');
+    $routes->get('paiements', 'Admin\PaiementController::index');
+    $routes->get('paiements/add', 'Admin\PaiementController::add');
+    $routes->post('paiements/add', 'Admin\PaiementController::add');
+    $routes->get('paiements/generateFinancialReport', 'Admin\PaiementController::generateFinancialReport');
+
 
     // Routes pour les clients
     $routes->get('clients', 'Admin\ClientController::index');
@@ -47,6 +48,7 @@ $routes->group('admin', function($routes) {
     $routes->get('clients/delete/(:num)', 'Admin\ClientController::delete/$1');
     $routes->get('clients/edit/(:num)', 'Admin\ClientController::edit/$1');
     $routes->post('clients/update/(:num)', 'Admin\ClientController::update/$1');
+    $routes->get('clients/show/(:num)', 'Admin\ClientController::show/$1');
 
 
 

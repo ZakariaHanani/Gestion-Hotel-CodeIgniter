@@ -1,9 +1,3 @@
-<?php
-/**
- * @var CodeIgniter\View\View $this
-*/
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,10 +10,17 @@
 <?= $this->section('content') ?>
 <div class="container mt-5">
     <div class="card shadow">
-        <div class="card-header bg-primary text-white">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
             <h3 class="mb-0">Créer une Nouvelle Réservation</h3>
+            <a href="<?= site_url('admin/reservations') ?>" class="btn btn-light btn-sm">Retour à la liste</a>
         </div>
         <div class="card-body">
+            <?php if (session()->getFlashdata('error')): ?>
+                <div class="alert alert-danger">
+                    <?= session()->getFlashdata('error') ?>
+                </div>
+            <?php endif; ?>
+
             <form action="<?= site_url('admin/reservations/store') ?>" method="post">
                 <!-- Client Selection -->
                 <div class="form-group">
@@ -67,5 +68,7 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>

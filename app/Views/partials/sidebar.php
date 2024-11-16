@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= base_url('admin/Paiements') ?>" class="nav-link">
+                    <a href="<?= base_url('admin/paiements') ?>" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p>Paiements</p>
                     </a>
