@@ -1,0 +1,401 @@
+INFO - 2024-11-06 12:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-06 14:58:15 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`admins` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155629_CreateAdmins.php(17): CodeIgniter\Database\Forge->createTable('admins')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateAdmins->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-06 15:04:08 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`admins` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155629_CreateAdmins.php(24): CodeIgniter\Database\Forge->createTable('admins')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateAdmins->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-06 15:06:49 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`clients` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155645_CreateClients.php(21): CodeIgniter\Database\Forge->createTable('clients')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateClients->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-06 15:10:05 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`admins` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155629_CreateAdmins.php(18): CodeIgniter\Database\Forge->createTable('admins')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateAdmins->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-06 15:13:18 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`reservations` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `r...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `r...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `r...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `r...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155734_CreateReservations.php(21): CodeIgniter\Database\Forge->createTable('reservations')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateReservations->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-06 15:15:02 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`reservations` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `r...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `r...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `r...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `r...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155734_CreateReservations.php(21): CodeIgniter\Database\Forge->createTable('reservations')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateReservations->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-06 15:20:27 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`reservations` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `r...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `r...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `r...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `r...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155734_CreateReservations.php(21): CodeIgniter\Database\Forge->createTable('reservations')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateReservations->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-06 15:24:42 --> mysqli_sql_exception: Can't create table `gestion_hotel`.`reservations` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `r...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `r...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `r...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `r...')
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Database\Migrations\2024-11-05-155734_CreateReservations.php(21): CodeIgniter\Database\Forge->createTable('reservations')
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateReservations->up()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+INFO - 2024-11-06 15:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:23:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-06 19:30:33 --> ErrorException: Array to string conversion
+[Method: POST, Route: store]
+in APPPATH\Controllers\AuthController.php on line 16.
+ 1 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\app\\Controllers\\AuthController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+INFO - 2024-11-06 19:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:44:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:44:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 22:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 22:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-06 22:10:19 --> ID utilisateur : 1
+INFO - 2024-11-06 22:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 22:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-06 22:52:10 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cl...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cl...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cl...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cl...', Array, false)
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Controllers\AjouterClient.php(21): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\rewrite.php(44): require_once('C:\\Users\\Hp\\Des...')
+#16 {main}
+CRITICAL - 2024-11-06 22:52:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[Method: POST, Route: client/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (:nom:, :prenom:, :telephone:, :adresse:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\AjouterClient.php(21): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+CRITICAL - 2024-11-06 22:52:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (\'TAGARTE\', \'Abdessadek\', \'0762811356\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'2024-11-06 22:52:10\', \'2024-11-06 22:52:10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (\'TAGARTE\', \'Abdessadek\', \'0762811356\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'2024-11-06 22:52:10\', \'2024-11-06 22:52:10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (:nom:, :prenom:, :telephone:, :adresse:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\AjouterClient.php(21): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+CRITICAL - 2024-11-06 22:52:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (\'TAGARTE\', \'Abdessadek\', \'0762811356\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'2024-11-06 22:52:10\', \'2024-11-06 22:52:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (\'TAGARTE\', \'Abdessadek\', \'0762811356\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'2024-11-06 22:52:10\', \'2024-11-06 22:52:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (\'TAGARTE\', \'Abdessadek\', \'0762811356\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'2024-11-06 22:52:10\', \'2024-11-06 22:52:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `clients` (`nom`, `prenom`, `telephone`, `adresse`, `created_at`, `updated_at`) VALUES (:nom:, :prenom:, :telephone:, :adresse:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\AjouterClient.php(21): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+ERROR - 2024-11-06 22:57:46 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cl...', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cl...')
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cl...')
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cl...', Array, false)
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Controllers\AjouterClient.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\rewrite.php(44): require_once('C:\\Users\\Hp\\Des...')
+#15 {main}
+CRITICAL - 2024-11-06 22:57:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[Method: POST, Route: client/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (:user_id:, :nom:, :prenom:, :adresse:, :telephone:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AjouterClient.php(33): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+CRITICAL - 2024-11-06 22:57:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (2, \'tagate\', \'anas\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'0762811356\', \'2024-11-06 22:57:46\', \'2024-11-06 22:57:46\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (2, \'tagate\', \'anas\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'0762811356\', \'2024-11-06 22:57:46\', \'2024-11-06 22:57:46\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (:user_id:, :nom:, :prenom:, :adresse:, :telephone:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AjouterClient.php(33): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+CRITICAL - 2024-11-06 22:57:46 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`gestion_hotel`.`clients`, CONSTRAINT `clients_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (2, \'tagate\', \'anas\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'0762811356\', \'2024-11-06 22:57:46\', \'2024-11-06 22:57:46\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (2, \'tagate\', \'anas\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'0762811356\', \'2024-11-06 22:57:46\', \'2024-11-06 22:57:46\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (2, \'tagate\', \'anas\', \'DR TAMAGUERT TAMAGUERT EL HAOUZ\', \'0762811356\', \'2024-11-06 22:57:46\', \'2024-11-06 22:57:46\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `clients` (`user_id`, `nom`, `prenom`, `adresse`, `telephone`, `created_at`, `updated_at`) VALUES (:user_id:, :nom:, :prenom:, :adresse:, :telephone:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AjouterClient.php(33): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AjouterClient->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjouterClient))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+INFO - 2024-11-06 23:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-06 23:00:49 --> ID utilisateur : 2
+ERROR - 2024-11-06 23:00:49 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-06 23:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-06 23:01:32 --> ID utilisateur : 3
+ERROR - 2024-11-06 23:01:32 --> Erreur lors de l'insertion dans la table clients.
+INFO - 2024-11-06 23:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
