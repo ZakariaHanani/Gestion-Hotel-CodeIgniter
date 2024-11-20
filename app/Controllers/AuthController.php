@@ -102,7 +102,7 @@ class AuthController extends BaseController
 
 
             if ($user['role'] === 'admin') {
-                return redirect()->to('admin/')->with('success', 'Bienvenue, administrateur !');
+                return redirect()->to('/admin/')->with('success', 'Bienvenue, administrateur !');
             } else {
                 return redirect()->to('/')->with('success', 'Connexion réussie !');
             }
