@@ -92,7 +92,7 @@ class AuthController extends BaseController
 
 
         $user = $usermodel->where('email', $this->request->getPost('email'))->first();
-
+          
         if ($user && password_verify($this->request->getPost('password'), $user['password'])) {
             session()->set([
                 'email'     => $user['email'],
@@ -102,7 +102,7 @@ class AuthController extends BaseController
 
 
             if ($user['role'] === 'admin') {
-                return redirect()->to('/admin/')->with('success', 'Bienvenue, administrateur !');
+                return redirect()->to('admin/')->with('success', 'Bienvenue, administrateur !');
             } else {
                 return redirect()->to('/')->with('success', 'Connexion réussie !');
             }

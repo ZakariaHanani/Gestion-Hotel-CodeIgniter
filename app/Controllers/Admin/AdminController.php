@@ -17,6 +17,7 @@ class AdminController extends BaseController {
 
     public function __construct()
     {
+        
         $this->clientModel = new ClientModel();
         $this->chambreModel = new ChambreModel();
         $this->reservationModel = new ReservationModel();
@@ -25,7 +26,6 @@ class AdminController extends BaseController {
     
         public function dashboard(){
 
-        
         $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         $reservationData = $this->getMonthlyReservationData();
         $data = [

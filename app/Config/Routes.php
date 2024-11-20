@@ -14,7 +14,7 @@ $routes->post('/connexion', 'AuthController::verify_login');
 $routes->get('/logout', 'AuthController::logout');
 
 
-$routes->group('admin', function($routes) {
+$routes->group('admin',['filter' => 'AdminAuth'] , function($routes) {
     //Main Routes
     $routes->get('/','Admin\AdminController::dashboard');
     $routes->get('dashboard', 'Admin\AdminController::dashboard');
