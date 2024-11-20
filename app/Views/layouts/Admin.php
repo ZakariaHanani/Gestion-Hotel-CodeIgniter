@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="<?= base_url('template/dist/css/custom.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/dist/css/adminlte.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/plugins/fontawesome-free/css/all.min.css') ?>">  
 </head>

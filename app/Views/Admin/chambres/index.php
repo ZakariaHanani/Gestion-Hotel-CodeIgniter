@@ -21,6 +21,35 @@
                 <a href="/admin/chambres/create" class="btn btn-primary">Ajouter une Chambre</a>
             </div>
         </div>
+
+        <!-- Formulaire de filtrage -->
+        <div class="row mb-4">
+            <form method="get" action="<?= base_url('/admin/chambres') ?>" class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <input type="text" name="numero" class="form-control" placeholder="Numéro de chambre" 
+                           value="<?= esc($filters['numero'] ?? '') ?>">
+                </div>
+                <div class="col-auto">
+                    <select name="statut" class="form-select">
+                        <option value="">-- Statut --</option>
+                        <option value="disponible" <?= isset($filters['statut']) && $filters['statut'] == 'disponible' ? 'selected' : '' ?>>Disponible</option>
+                        <option value="occupé" <?= isset($filters['statut']) && $filters['statut'] == 'occupé' ? 'selected' : '' ?>>Occupé</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <select name="type" class="form-select">
+                        <option value="">-- Type de chambre --</option>
+                        <?php foreach ($types as $type): ?>
+                            <option value="<?= $type['id'] ?>" <?= isset($filters['type']) && $filters['type'] == $type['id'] ? 'selected' : '' ?>><?= esc($type['nom']) ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Filtrer</button>
+                </div>
+            </form>
+        </div>
+
     </div>
 </div>
 
@@ -30,7 +59,7 @@
             <thead class="table-dark">
                 <tr>
                     <th>Numéro</th>
-                    <th>Prix (€)</th>
+                    <th>Prix (MAD)</th>
                     <th>Statut</th>
                     <th>Type</th>
                     <th>Description</th>

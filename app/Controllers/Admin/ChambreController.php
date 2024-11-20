@@ -11,10 +11,32 @@ class ChambreController extends BaseController
     public function index()
     {
         $chambreModel = new ChambreModel();
-        $data['chambres'] = $chambreModel->getWithType();
-        foreach($data['chambres'] as &$chambre){
-           $chambre['images'] = $chambreModel->getImages($chambre['id']);
+
+        $filters = $this->request->getGet();
+
+        $query = $chambreModel->select('*');
+
+        if (!empty($filters['numero'])) {
+            $query->like('numero', $filters['numero']);
         }
+        if (!empty($filters['statut'])) {
+            $query->where('statut', $filters['statut']);
+        }
+        if (!empty($filters['type'])) {
+            $query->where('type_chambre_id', $filters['type']);
+        }
+
+        $data['chambres'] = $query->getWithType();
+
+        foreach ($data['chambres'] as &$chambre) {
+            $chambre['images'] = $chambreModel->getImages($chambre['id']);
+        }
+
+        $typeModel = new ChambreTypeModel();
+        $data['types'] = $typeModel->findAll();
+
+        $data['filters'] = $filters;
+
         return view('Admin/chambres/index', $data);
     }
 
@@ -56,7 +78,7 @@ class ChambreController extends BaseController
             $id =$chambreModel->getInsertID();
             $this->uploadImages($id);
 
-            return redirect()->to('/admin/chambres');
+         return redirect()->to('/admin/chambres');
         }
     }
 
@@ -66,13 +88,10 @@ class ChambreController extends BaseController
     $imageModel = new ImageModel();
     $typeChambreModel = new ChambreTypeModel();
 
-    // Fetch the room details
     $data['chambre'] = $chambreModel->find($id);
 
-    // Fetch room types for the dropdown
     $data['types_chambre'] = $typeChambreModel->findAll();
 
-    // Fetch associated images
     $data['images'] = $imageModel->where('chambre_id', $id)->findAll();
 
     return view('Admin/chambres/edit', $data);

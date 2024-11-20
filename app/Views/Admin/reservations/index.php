@@ -26,7 +26,34 @@
                 <a href="<?= site_url('admin/reservations/create') ?>" class="btn btn-primary">Nouvelle Réservation</a>
             </div>
         </div>
+
+        <div class="row mb-4">
+        <form method="get" action="<?= base_url('/admin/reservations') ?>" class="row g-3 align-items-center">
+    <!-- Filtre par Numéro de chambre -->
+    <div class="col-auto">
+        <input type="text" name="numero" class="form-control" placeholder="Numéro de réservation" 
+               value="<?= esc($filters['numero'] ?? '') ?>">
     </div>
+    <!-- Filtre par Statut de réservation -->
+    <div class="col-auto">
+        <select name="statut" class="form-select">
+            <option value="">-- Statut --</option>
+            <option value="en attente" <?= isset($filters['statut']) && $filters['statut'] == 'en attente' ? 'selected' : '' ?>>En attente</option>
+            <option value="confirmée" <?= isset($filters['statut']) && $filters['statut'] == 'confirmée' ? 'selected' : '' ?>>Confirmée</option>
+            <option value="annulée" <?= isset($filters['statut']) && $filters['statut'] == 'annulée' ? 'selected' : '' ?>>Annulée</option>
+            <option value="terminée" <?= isset($filters['statut']) && $filters['statut'] == 'terminée' ? 'selected' : '' ?>>Terminée</option>
+
+        </select>
+    </div>
+    <!-- Bouton de soumission -->
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Filtrer</button>
+    </div>
+    </form>
+      
+        </div>
+    
+</div>
 </div>
 
 <div class="content">

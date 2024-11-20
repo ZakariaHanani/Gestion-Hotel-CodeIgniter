@@ -1,0 +1,21 @@
+/* Styles pour la barre de recherche */
+.form-control-navbar {
+    color: #000; /* Change la couleur du texte à noir */
+    background-color: #fff; /* Assure un fond blanc */
+    border: 1px solid #ff0000; /* Optionnel : ajoute une bordure */
+}
+
+/* Placeholder (texte d'indication) */
+.form-control-navbar::placeholder {
+    color: #888; /* Change la couleur du placeholder */
+    opacity: 1; /* Assure qu'il est bien visible */
+}
+
+/* Quand l'utilisateur tape du texte */
+.form-control-navbar:focus {
+    color: #000; /* Le texte saisi sera noir */
+    background-color: #fff; /* Conserve le fond blanc */
+    border-color: #007bff; /* Bordure bleue au focus */
+    outline: none; /* Supprime l'effet par défaut au focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ajoute une légère ombre */
+}

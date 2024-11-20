@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Admin;
 
+use App\Models\PaiementModel;
 use App\Models\ReservationModel;
 use App\Models\ClientModel;
 use App\Models\ChambreModel;
@@ -12,25 +13,39 @@ class ReservationController extends Controller
     protected $reservationModel;
     protected $clientModel;
     protected $chambreModel;
+    protected $paiementModel ;
 
     public function __construct()
     {
         $this->reservationModel = new ReservationModel();
         $this->clientModel = new ClientModel();
         $this->chambreModel = new ChambreModel();
+        $this->paiementModel= new PaiementModel(); 
     }
 
     public function index()
     {
-        $reservations = $this->reservationModel->findAll();
+        $filters = $this->request->getGet();
+        $builder = $this->reservationModel->builder();
+    
+        if (!empty($filters['statut'])) {
+            $builder->where('statut', $filters['statut']);
+        }
+        $reservations = $builder->get()->getResultArray();
+    
         foreach ($reservations as &$reservation) {
             $reservation['client'] = $this->clientModel->find($reservation['client_id']);
             $reservation['chambre'] = $this->chambreModel->find($reservation['chambre_id']);
         }
+    
         $data['reservations'] = $reservations;
-
+        $data['filters'] = $filters;
+    
         return view('admin/reservations/index', $data);
     }
+
+
+
 
     public function create()
     {
@@ -45,41 +60,63 @@ class ReservationController extends Controller
         $dateDebut =$this->request->getPost('date_debut') ;
         $dateFin =$this->request->getPost('date_fin');
         $chambreId=$this->request->getPost('chambre_id') ;
-        
-         // Check if date_debut is in the past
+
+         $dateArrivee = new \DateTime($dateDebut);
+         $dateDepart = new \DateTime($dateFin);
+         $days = $dateDepart->diff($dateArrivee)->days;
+         if ($days < 1) {
+            return redirect()->back()->with('error', 'La durée du séjour doit être d\'au moins 1 jour.');
+        }
+
+        $chambre = $this->chambreModel->find($chambreId);
+        if (!$chambre) {
+            return redirect()->back()->with('error', 'Chambre introuvable.');
+        }
+
+        $montant = $days * $chambre['prix'];
+
+
     if (strtotime($dateDebut) < strtotime(date('Y-m-d'))) {
         return redirect()->back()->with('error', 'La date de début ne peut pas être dans le passé.');
     }
 
-    // Check if date_fin is before date_debut
     if (strtotime($dateFin) <= strtotime($dateDebut)) {
         return redirect()->back()->with('error', 'La date de fin doit être après la date de début.');
     }
 
-    // Check for overlaps with existing reservations
     $existingReservations = $this->reservationModel
     ->where('chambre_id', $chambreId)
     ->where('statut !=', 'terminée')
-    ->groupStart() // Start grouping conditions
+    ->groupStart() 
         ->where('date_debut <=', $dateFin)
         ->where('date_fin >=', $dateDebut)
-    ->groupEnd() // End grouping conditions
+    ->groupEnd()
     ->findAll();
 
-    print_r($existingReservations);
 
     if (!empty($existingReservations)) {
         return redirect()->back()->with('error', 'Les dates sélectionnées chevauchent une autre réservation pour cette chambre.');
     }
-        $this->reservationModel->insert([
+       $reservationId = $this->reservationModel->insert([
         'client_id' => $this->request->getPost('client_id'),
         'chambre_id' => $chambreId,
         'date_debut' =>$dateDebut,
         'date_fin' =>$dateFin,
-    ]);
-        $this->chambreModel->update($this->request->getPost('chambre_id'), ['statut' => 'occupe']);
+    ]); 
+    
+    if (!$reservationId) {
+        return redirect()->back()->with('error', 'Erreur lors de la création de la réservation.');
+    }
 
-        
+    $this->paiementModel->insert([
+        'reservation_id' => $reservationId,
+        'montant' => $montant,
+        'methode' => $data['methode'] ?? 'non_specifiee',
+        'date' => date('Y-m-d H:i:s'),
+        'statut' => 'en_attente', 
+    ]);
+
+        $this->chambreModel->update($this->request->getPost('chambre_id'), ['statut' => 'occupe']);
         return redirect()->to('/admin/reservations')->with('message', 'Réservation créée avec succès');
     }
 

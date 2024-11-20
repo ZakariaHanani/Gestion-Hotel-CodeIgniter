@@ -13,7 +13,6 @@ class PaiementModel extends Model
     protected $allowedFields    = ['reservation_id', 'montant', 'methode', 'date', 'statut'];
     protected $useTimestamps    = false;
 
-    // Validation rules (if any)
     protected $validationRules      = [
         'reservation_id' => 'required|integer',
         'montant'        => 'required|decimal',
@@ -24,5 +23,4 @@ class PaiementModel extends Model
     protected $validationMessages   = [];
     protected $skipValidation       = false;
 
-    // You can add custom methods for specific queries if needed
 }
