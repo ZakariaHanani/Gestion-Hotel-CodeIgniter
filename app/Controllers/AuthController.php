@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\AdminModel;
 use App\Models\ClientModel;
 use App\Models\UserModel;
 
@@ -54,11 +55,9 @@ class AuthController extends BaseController
             ])) {
                 return redirect()->to('/login')->with('success', 'Inscription réussie !');
             } else {
-                log_message('error', 'Erreur lors de l\'insertion dans la table clients.');
                 return redirect()->back()->with('error', 'Erreur d\'insertion dans la table clients.');
             }
         } else {
-            log_message('error', 'Erreur lors de l\'insertion dans la table users.');
             return redirect()->back()->with('error', 'Erreur d\'insertion dans la table users.');
         }
     }
@@ -70,7 +69,11 @@ class AuthController extends BaseController
 
     public function login()
     {
+        if (session()->get('logged_in')){
+            return redirect()->to('/');
+        }else{
         return view('auth/login');
+        }
     }
 
     public function verify_login()
@@ -89,20 +92,23 @@ class AuthController extends BaseController
             $data['validation'] = $this->validator;
             return view('auth/login', $data);
         }
-
-
         $user = $usermodel->where('email', $this->request->getPost('email'))->first();
 
+
+
         if ($user && password_verify($this->request->getPost('password'), $user['password'])) {
+
+
             session()->set([
+                'user_id'=>$user['id'],
                 'email'     => $user['email'],
                 'role'      => $user['role'],
                 'logged_in' => true
             ]);
 
-
             if ($user['role'] === 'admin') {
-                return redirect()->to('/admin/')->with('success', 'Bienvenue, administrateur !');
+
+                return redirect()->to('admin/')->with('success', 'Bienvenue, administrateur !');
             } else {
                 return redirect()->to('/')->with('success', 'Connexion réussie !');
             }
