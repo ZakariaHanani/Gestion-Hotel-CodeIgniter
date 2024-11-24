@@ -5,6 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class RapportModel extends Model
+
 {
     protected $table            = 'rapports';
     protected $primaryKey       = 'id';

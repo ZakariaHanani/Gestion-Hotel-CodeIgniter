@@ -21,6 +21,7 @@ class ReservationController extends Controller
         $this->clientModel = new ClientModel();
         $this->chambreModel = new ChambreModel();
         $this->paiementModel= new PaiementModel(); 
+        
     }
 
     public function index()
@@ -60,6 +61,7 @@ class ReservationController extends Controller
         $dateDebut =$this->request->getPost('date_debut') ;
         $dateFin =$this->request->getPost('date_fin');
         $chambreId=$this->request->getPost('chambre_id') ;
+        $methode =$this->request->getPost('methode') ;
 
          $dateArrivee = new \DateTime($dateDebut);
          $dateDepart = new \DateTime($dateFin);
@@ -111,7 +113,7 @@ class ReservationController extends Controller
     $this->paiementModel->insert([
         'reservation_id' => $reservationId,
         'montant' => $montant,
-        'methode' => $data['methode'] ?? 'non_specifiee',
+        'methode' => $methode ?? 'non_specifiee',
         'date' => date('Y-m-d H:i:s'),
         'statut' => 'en_attente', 
     ]);
@@ -150,6 +152,15 @@ class ReservationController extends Controller
                 $this->chambreModel->update($data['chambre_id'], ['statut' => 'occupe']);
             }
             $this->reservationModel->update($id, $data);
+            $paiement = $this->paiementModel->where('reservation_id', $id)->first();
+
+            if ($paiement) {
+                $paiementData = [
+                    'statut' => $this->getPaiementStatutFromReservation($data['statut']),
+                    'date' => date('Y-m-d H:i:s'), // Mettre à jour la date de modification
+                ];
+                $this->paiementModel->update($paiement['id'], $paiementData);
+            }
             return redirect()->to('/admin/reservations')->with('message', 'Réservation mise a jour avec succès');
         }
     }
@@ -166,4 +177,32 @@ class ReservationController extends Controller
         }
         return redirect()->to('/admin/reservations');
     }
+
+    private function getPaiementStatutFromReservation($reservationStatut)
+{
+    switch ($reservationStatut) {
+        case 'confirmée':
+            return 'effectue';
+        case 'annulée':
+            return 'echoue';
+        default:
+            return 'en_attente';
+    }
+}
+
+public function updateStatusAutomatically()
+{
+    $reservations = $this->reservationModel->where('statut !=', 'terminée')->findAll();
+    foreach ($reservations as $reservation) {
+        if (strtotime($reservation['date_fin']) < time()) {
+            $this->reservationModel->update($reservation['id'], [
+                'statut' => 'terminée'
+            ]);
+            $this->chambreModel->update($reservation['chambre_id'], ['statut' => 'disponible']);
+
+        }
+    }
+}
+
+
 }

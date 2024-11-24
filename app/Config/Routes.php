@@ -30,11 +30,16 @@ $routes->group('admin',['filter' => 'AdminAuth'] , function($routes) {
     $routes->get('reservations/delete/(:num)', 'Admin\ReservationController::delete/$1');
     $routes->get('reservations/edit/(:num)', 'Admin\ReservationController::edit/$1');
     $routes->post('reservations/update/(:num)', 'Admin\ReservationController::update/$1');
+    $routes->get('reservations/updateStatus', 'Admin\ReservationController::updateStatusAutomatically');
+
 
      // Routes pour les paiements
     $routes->get('paiements', 'Admin\PaiementController::index');
     $routes->get('paiements/add', 'Admin\PaiementController::add');
     $routes->post('paiements/add', 'Admin\PaiementController::add');
+    $routes->get('paiements/edit_statut/(:num)', 'Admin\PaiementController::editStatut/$1');
+    $routes->post('paiements/update_statut/(:num)', 'Admin\PaiementController::updateStatut/$1');
+
     $routes->get('paiements/generateFinancialReport', 'Admin\PaiementController::generateFinancialReport');
 
     // Routes pour les clients

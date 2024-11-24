@@ -68,6 +68,7 @@
             <table class="table table-striped table-bordered">
                 <thead class="table-dark">
                     <tr>
+                        <th>Reservation ID</th>
                         <th>Client</th>
                         <th>Chambre</th>
                         <th>Date Début</th>
@@ -79,6 +80,7 @@
                 <tbody>
                     <?php foreach ($reservations as $reservation): ?>
                         <tr>
+                            <td><?= $reservation['id'] ?></td>
                             <td><?= $reservation['client']['nom'] .' '. $reservation['client']['prenom'] ?? '<span class="text-danger">Client inconnu</span>' ?></td>
                             <td><?= $reservation['chambre']['numero'] ?? '<span class="text-danger">Chambre inconnue</span>' ?></td>
                             <td><?= $reservation['date_debut'] ?></td>
