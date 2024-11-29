@@ -38,8 +38,6 @@ class AuthController extends BaseController
             'updated_at' => date('Y-m-d H:i:s')
         ])) {
             $user_id = $usermodel->getInsertID();
-            log_message('debug', 'ID utilisateur : ' . $user_id);
-
             if (!$user_id) {
                 return redirect()->back()->with('error', 'Erreur d\'insertion dans la table users.');
             }

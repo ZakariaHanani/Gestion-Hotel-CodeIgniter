@@ -1,7 +1,7 @@
 <?= $this->extend('Client\home') ?>
 
 <?= $this->section('contents') ?>
-<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh; background-image: url('/public/uploads/chambres/1731755335_9d7e260425044cb9d4a0.jpg'); background-size: cover; background-position: center;">
+<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh; background-size: cover; background-position: center;">
     <div class="login-box p-4 shadow-lg rounded-4 bg-white" style="width: 600px;">
         <div class="text-center mb-4">
             <h3 class="text-primary fw-bold">Inscription</h3>
@@ -61,22 +61,17 @@
                     <div class="text-danger"><?= $validation->getError('prenom') ?></div>
                 <?php endif; ?>
             </div>
-
-
             <div class="mb-3">
-                <label for="adresse" class="form-label fw-bold text-muted">Adresse</label>
-                <input
-                        type="text"
-                        name="adresse"
-                        id="adresse"
-                        class="form-control"
-                        placeholder="Entrez votre adresse"
-                        value="<?= old('adresse') ?>"
-                        required>
+                <label for="country" class="form-label fw-bold text-muted">Pays</label>
+                <select name="adresse" id="country" class="form-select" required>
+                    <option value="">Sélectionnez votre pays</option>
+
+                </select>
                 <?php if (isset($validation) && $validation->hasError('adresse')): ?>
                     <div class="text-danger"><?= $validation->getError('adresse') ?></div>
                 <?php endif; ?>
             </div>
+
 
 
             <div class="mb-3">
@@ -148,7 +143,40 @@
 </div>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    async function fetchCountries() {
+        try {
+            const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags');
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ${response.status} : ${response.statusText}`);
+            }
+
+            const countries = await response.json();
+            const sortedCountries = countries.sort((a, b) =>
+                a.name.common.localeCompare(b.name.common)
+            );
+
+            const select = document.getElementById('country');
+            if (!select) {
+                throw new Error("Élément select non trouvé !");
+            }
+
+            sortedCountries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country.name.common;
+                option.textContent = country.name.common;
+                select.appendChild(option);
+            });
+        } catch (error) {
+            console.error("Erreur : ", error.message);
+        }
+    }
+
+    // Attendre que le DOM soit prêt avant d'exécuter la fonction
+    document.addEventListener('DOMContentLoaded', fetchCountries);
+</script>
+
 
 <?= $this->endSection() ?>

@@ -1,8 +1,12 @@
 <?= $this->extend('Client\home') ?>
 
 <?= $this->section('contents') ?>
-<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh; background-image: url('/public/uploads/chambres/1731755335_9d7e260425044cb9d4a0.jpg'); background-size: cover; background-position: center;">
-
+<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh; background-size: cover; background-position: center;">
+    <?php if (session()->has('success')): ?>
+        <div class="alert alert-success">
+            <?= esc(session('success')) ?>
+        </div>
+    <?php endif; ?>
     <div class="login-box p-4 shadow-lg rounded-4 bg-white" style="width: 400px;">
         <div class="text-center mb-4">
             <h3 class="text-primary fw-bold">Bienvenue</h3>
@@ -72,5 +76,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <?= $this->endSection() ?>
