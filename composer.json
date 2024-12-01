@@ -9,13 +9,6 @@
         "source": "https://github.com/codeigniter4/CodeIgniter4",
         "slack": "https://codeigniterchat.slack.com"
     },
-    "require": {
-        "php": "^8.1",
-        "ext-intl": "*",
-        "ext-mbstring": "*",
-        "laminas/laminas-escaper": "^2.13",
-        "psr/log": "^3.0"
-    },
     "require-dev": {
         "codeigniter/coding-standard": "^1.7",
         "fakerphp/faker": "^1.9",
@@ -62,5 +55,8 @@
     },
     "scripts": {
         "test": "phpunit"
+    },
+    "require": {
+        "dompdf/dompdf": "^3.0"
     }
 }

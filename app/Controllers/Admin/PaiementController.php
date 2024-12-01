@@ -11,10 +11,34 @@ class PaiementController extends BaseController
 {
     public function index()
     {
-        $model = new PaiementModel();
-        $data['paiements'] = $model->findAll(); 
-        return view('Admin/Paiements/index', $data);
+        $paiementModel = new PaiementModel();
+    
+        // Récupérer les filtres depuis la requête GET
+        $filters = [
+            'reservation_id' => $this->request->getGet('reservation_id'),
+            'methode' => $this->request->getGet('methode'),
+            'statut' => $this->request->getGet('statut'),
+        ];
+    
+        // Appliquer les filtres au modèle
+        $query = $paiementModel;
+        if (!empty($filters['reservation_id'])) {
+            $query = $query->where('reservation_id', $filters['reservation_id']);
+        }
+        if (!empty($filters['methode'])) {
+            $query = $query->where('methode', $filters['methode']);
+        }
+        if (!empty($filters['statut'])) {
+            $query = $query->where('statut', $filters['statut']);
+        }
+    
+        // Récupérer les paiements filtrés
+        $data['paiements'] = $query->findAll();
+        $data['filters'] = $filters; // Passer les filtres à la vue pour les garder sélectionnés
+    
+        return view('admin/paiements/index', $data);
     }
+    
 
     public function add()
     {
@@ -41,10 +65,61 @@ class PaiementController extends BaseController
             return redirect()->to('/admin/paiements')->with('success', 'Paiement ajouté avec succès');
         }
 
-        
-
         return view('admin/paiements/add', $data);
     }
+
+    public function editStatut($id)
+{
+    $paiementModel = new PaiementModel();
+
+    // Vérifier si le paiement existe
+    $paiement = $paiementModel->find($id);
+    if (!$paiement) {
+        return redirect()->to('/admin/paiements')->with('error', 'Paiement introuvable');
+    }
+
+    // Passer les données à la vue
+    $data = [
+        'paiement' => $paiement,
+    ];
+
+    return view('admin/paiements/edit_statut', $data);
+}
+
+
+public function updateStatut($id)
+{
+    $paiementModel = new PaiementModel();
+    $reservationModel = new ReservationModel();
+
+    // Vérifier si le paiement existe
+    $paiement = $paiementModel->find($id);
+    if (!$paiement) {
+        return redirect()->to('/admin/paiements')->with('error', 'Paiement introuvable');
+    }
+
+    // Récupérer le statut depuis le formulaire
+    $statutPaiement = $this->request->getPost('statut');
+
+    // Mettre à jour uniquement le statut du paiement
+    $paiementModel->update($id, ['statut' => $statutPaiement]);
+
+    // Définir le statut de la réservation en fonction du statut du paiement
+    $statutReservation = 'en attente'; // Par défaut
+    if ($statutPaiement === 'effectue') {
+        $statutReservation = 'confirmée';
+    } elseif ($statutPaiement === 'echoue') {
+        $statutReservation = 'annulée';
+    }
+
+    // Mettre à jour le statut de la réservation correspondante
+    $reservationModel->update($paiement['reservation_id'], ['statut' => $statutReservation]);
+
+    return redirect()->to('/admin/paiements')->with('success', 'Statut du paiement et de la réservation mis à jour avec succès');
+}
+
+
+
 
     // Generate a financial report for payments
      /* public function generateFinancialReport()

@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\AdminModel;
 use App\Models\ClientModel;
 use App\Models\UserModel;
 
@@ -92,11 +91,7 @@ class AuthController extends BaseController
         }
         $user = $usermodel->where('email', $this->request->getPost('email'))->first();
 
-
-
         if ($user && password_verify($this->request->getPost('password'), $user['password'])) {
-
-
             session()->set([
                 'user_id'=>$user['id'],
                 'email'     => $user['email'],
@@ -105,7 +100,6 @@ class AuthController extends BaseController
             ]);
 
             if ($user['role'] === 'admin') {
-
                 return redirect()->to('admin/')->with('success', 'Bienvenue, administrateur !');
             } else {
                 return redirect()->to('/')->with('success', 'Connexion réussie !');

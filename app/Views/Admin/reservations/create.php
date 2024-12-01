@@ -55,6 +55,14 @@
                     <label for="date_fin">Date de Fin:</label>
                     <input type="date" name="date_fin" id="date_fin" class="form-control" required>
                 </div>
+                <div class="mb-3">
+    <label for="methode" class="form-label">Méthode de Paiement</label>
+    <select name="methode" id="methode" class="form-select" required>
+        <option value="carte" <?= isset($paiement['methode']) && $paiement['methode'] == 'carte' ? 'selected' : '' ?>>Carte Bancaire</option>
+        <option value="paypal" <?= isset($paiement['methode']) && $paiement['methode'] == 'paypal' ? 'selected' : '' ?>>PayPal</option>
+        <option value="espèces" <?= isset($paiement['methode']) && $paiement['methode'] == 'espèces' ? 'selected' : '' ?>>Espèces</option>
+    </select>
+</div>
 
                 <!-- Submit Button -->
                 <div class="form-group text-center">

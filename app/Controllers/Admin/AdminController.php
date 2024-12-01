@@ -17,6 +17,7 @@ class AdminController extends BaseController {
 
     public function __construct()
     {
+        
         $this->clientModel = new ClientModel();
         $this->chambreModel = new ChambreModel();
         $this->reservationModel = new ReservationModel();
@@ -25,7 +26,6 @@ class AdminController extends BaseController {
     
         public function dashboard(){
 
-        
         $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         $reservationData = $this->getMonthlyReservationData();
         $data = [
@@ -56,12 +56,26 @@ class AdminController extends BaseController {
         $data['admin'] = $adminModel->getAdminProfile($adminId);
         return view('admin/profile', $data);
     }
+
+
+
+    public function search()
+{
+    $query = $this->request->getGet('query');
+
+    $data = [
+        'clients' => $this->clientModel->like('nom', $query)->findAll(),
+        'chambres' => $this->chambreModel->like('numero', $query)->getWithType(),
+        'query' => $query,
+    ];
+
+    return view('admin/search_results', $data);
+}
+
                 
-        } 
 
 
-
-
+} 
 
 
 ?>

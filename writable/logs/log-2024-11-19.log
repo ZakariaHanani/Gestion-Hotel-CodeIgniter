@@ -1,0 +1,646 @@
+INFO - 2024-11-19 14:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 14:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 16:02:35 --> ErrorException: require_once(C:\xampp\htdocs\Gestion-Hotel\public\libraries/dompdf/autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:10:10 --> ErrorException: require_once(C:\xampp\htdocs\Gestion-Hotel\public\dompdf/autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:10:39 --> ErrorException: require_once(C:\xampp\htdocs\Gestion-Hotel\public\dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:11:30 --> ErrorException: require_once(C:\xampp\htdocs\Gestion-Hotel\app\../public/libraries/dompdf/autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:11:59 --> ErrorException: require_once(C:\xampp\htdocs\Gestion-Hotel\app\..\public\libraries\dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:24:34 --> ErrorException: require_once(C:\xampp\htdocs\Gestion-Hotel\public\libraries/dompdf/autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:25:26 --> ErrorException: require(vendor/autoload.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:28:14 --> ErrorException: require(vendor\autoload.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 4.
+ 1 APPPATH\Controllers\Admin\RapportController.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(4): require()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:28:41 --> ErrorException: require_once(dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 3.
+ 1 APPPATH\Controllers\Admin\RapportController.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(3): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:28:43 --> ErrorException: require_once(dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 3.
+ 1 APPPATH\Controllers\Admin\RapportController.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(3): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:31:33 --> ErrorException: require_once(dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 3.
+ 1 APPPATH\Controllers\Admin\RapportController.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(3): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:31:36 --> ErrorException: require_once(dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 3.
+ 1 APPPATH\Controllers\Admin\RapportController.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(3): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:37:53 --> ErrorException: require_once(dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 3.
+ 1 APPPATH\Controllers\Admin\RapportController.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(3): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:37:58 --> ErrorException: require_once(dompdf\autoload.inc.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 3.
+ 1 APPPATH\Controllers\Admin\RapportController.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(3): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:45:20 --> ErrorException: require_once(C:\xampp\htdocs\Gestion-Hotel\app\Controllers\Admin/../vendor/autoload.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/rapport]
+in APPPATH\Controllers\Admin\RapportController.php on line 3.
+ 1 APPPATH\Controllers\Admin\RapportController.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Admin\RapportController.php(3): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Controllers\\Admin\\RapportController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 8 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+ERROR - 2024-11-19 16:58:16 --> mysqli_sql_exception: Unknown column 'prix_total' in 'field list' in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Gestion-Hotel\app\Controllers\Admin\RapportController.php(61): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(933): App\Controllers\Admin\RapportController->revenus()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp\htdocs\Gestion-Hotel\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp\htdocs\Gestion-Hotel\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-11-19 16:58:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'prix_total' in 'field list'
+[Method: GET, Route: admin/rapport/revenus]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Admin\RapportController.php(61): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->revenus()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:58:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'prix_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Admin\RapportController.php(61): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->revenus()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 16:58:16 --> [Caused by] mysqli_sql_exception: Unknown column 'prix_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\RapportController.php(61): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->revenus()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 17:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 17:56:38 --> Error: Call to a member function insert() on null
+[Method: POST, Route: admin/reservations/store]
+in APPPATH\Controllers\Admin\ReservationController.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ReservationController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 17:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 17:58:54 --> Error: Call to a member function insert() on null
+[Method: POST, Route: admin/reservations/store]
+in APPPATH\Controllers\Admin\ReservationController.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ReservationController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 17:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 17:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 18:22:51 --> mysqli_sql_exception: Unknown column 'prix_total' in 'field list' in C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Hotel\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\Gestion-Hotel\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\Gestion-Hotel\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion-Hotel\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Gestion-Hotel\app\Controllers\Admin\RapportController.php(82): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(933): App\Controllers\Admin\RapportController->telechargerRevenusPDF()
+#8 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp\htdocs\Gestion-Hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Gestion-Hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp\htdocs\Gestion-Hotel\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp\htdocs\Gestion-Hotel\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-11-19 18:22:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'prix_total' in 'field list'
+[Method: GET, Route: admin/rapport/telechargerRevenusPDF/11/2024]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Admin\RapportController.php(82): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->telechargerRevenusPDF()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 18:22:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'prix_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Admin\RapportController.php(82): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->telechargerRevenusPDF()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 18:22:51 --> [Caused by] mysqli_sql_exception: Unknown column 'prix_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\RapportController.php(82): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->telechargerRevenusPDF()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 18:25:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/rapports/revenus_pdf.php"
+[Method: GET, Route: admin/rapport/telechargerRevenusPDF/11/2024]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\RapportController.php(90): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->telechargerRevenusPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 18:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 18:49:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/chambre_type/index.php"
+[Method: GET, Route: admin/chambre_type]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\ChambreTypeController.php(21): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ChambreTypeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 18:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 18:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 19:19:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/rapports/revenus_pdf.php"
+[Method: GET, Route: admin/rapport/telechargerRevenusPDF/12/2024]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\RapportController.php(84): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->telechargerRevenusPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 19:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 19:25:27 --> ErrorException: Undefined variable $mois
+[Method: GET, Route: admin/rapport]
+in APPPATH\Views\Admin\rapports\index.php on line 77.
+ 1 APPPATH\Views\Admin\rapports\index.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\rapports\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\RapportController.php(38): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 19:28:28 --> ErrorException: Undefined variable $mois
+[Method: GET, Route: admin/rapport]
+in APPPATH\Views\Admin\rapports\index.php on line 77.
+ 1 APPPATH\Views\Admin\rapports\index.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\rapports\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\RapportController.php(38): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 19:33:02 --> ErrorException: Undefined variable $mois
+[Method: GET, Route: admin/rapport]
+in APPPATH\Views\Admin\rapports\index.php on line 69.
+ 1 APPPATH\Views\Admin\rapports\index.php(69): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\rapports\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\RapportController.php(38): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 19:33:08 --> ErrorException: Undefined variable $mois
+[Method: GET, Route: admin/rapport]
+in APPPATH\Views\Admin\rapports\index.php on line 69.
+ 1 APPPATH\Views\Admin\rapports\index.php(69): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\rapports\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\RapportController.php(38): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 19:40:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/rapports/chambres_popularite.php"
+[Method: GET, Route: admin/rapport/chambres-popularite]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\RapportController.php(103): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->chambresPopularite()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 19:48:44 --> ErrorException: Undefined variable $mois
+[Method: GET, Route: admin/rapport]
+in APPPATH\Views\Admin\rapports\index.php on line 73.
+ 1 APPPATH\Views\Admin\rapports\index.php(73): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\rapports\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\RapportController.php(38): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 19:48:50 --> ErrorException: Undefined variable $mois
+[Method: GET, Route: admin/rapport]
+in APPPATH\Views\Admin\rapports\index.php on line 73.
+ 1 APPPATH\Views\Admin\rapports\index.php(73): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\rapports\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\RapportController.php(38): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+CRITICAL - 2024-11-19 19:49:07 --> ErrorException: Undefined variable $mois
+[Method: GET, Route: admin/rapport]
+in APPPATH\Views\Admin\rapports\index.php on line 73.
+ 1 APPPATH\Views\Admin\rapports\index.php(73): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion-Hotel\\app\\Views\\Admin\\rapports\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\RapportController.php(38): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 19:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 19:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 20:01:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/rapport/chambres_popularite.php"
+[Method: GET, Route: admin/rapport/chambres-popularite]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\RapportController.php(104): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\RapportController->chambresPopularite()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')
+INFO - 2024-11-19 20:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 20:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 20:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 20:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 20:09:23 --> ErrorException: Undefined array key "file_name"
+[Method: GET, Route: admin/chambres/delete/26]
+in APPPATH\Controllers\Admin\ChambreController.php on line 130.
+ 1 APPPATH\Controllers\Admin\ChambreController.php(130): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ChambreController->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Hotel\\public\\index.php')

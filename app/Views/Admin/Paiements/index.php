@@ -37,6 +37,35 @@
             </div>
         <?php endif; ?>
 
+        <!-- Formulaire de filtre -->
+        <form method="get" action="<?= site_url('admin/paiements') ?>" class="row g-3 mb-3">
+            <div class="col-md-3">
+                <input type="text" name="reservation_id" class="form-control" placeholder="ID Réservation"
+                       value="<?= esc($filters['reservation_id'] ?? '') ?>">
+            </div>
+            <div class="col-md-3">
+                <select name="methode" class="form-select">
+                    <option value="">-- Méthode de Paiement --</option>
+                    <option value="carte" <?= isset($filters['methode']) && $filters['methode'] === 'carte' ? 'selected' : '' ?>>Carte</option>
+                    <option value="paypal" <?= isset($filters['methode']) && $filters['methode'] === 'paypal' ? 'selected' : '' ?>>PayPal</option>
+                    <option value="especes" <?= isset($filters['methode']) && $filters['methode'] === 'especes' ? 'selected' : '' ?>>Espèces</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select name="statut" class="form-select">
+                    <option value="">-- Statut --</option>
+                    <option value="effectue" <?= isset($filters['statut']) && $filters['statut'] === 'effectue' ? 'selected' : '' ?>>Effectué</option>
+                    <option value="en_attente" <?= isset($filters['statut']) && $filters['statut'] === 'en_attente' ? 'selected' : '' ?>>En attente</option>
+                    <option value="echoue" <?= isset($filters['statut']) && $filters['statut'] === 'echoue' ? 'selected' : '' ?>>Echoue</option>
+
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary w-100">Filtrer</button>
+            </div>
+        </form>
+
+        <!-- Table des paiements -->
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead class="table-dark">
@@ -47,7 +76,7 @@
                         <th>Méthode</th>
                         <th>Date</th>
                         <th>Statut</th>
-                        <th>Actions</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,10 +92,7 @@
                                     <?= ucfirst($paiement['statut']) ?>
                                 </span>
                             </td>
-                            <td>
-                                <a href="<?= site_url('admin/paiements/edit/' . $paiement['id']) ?>" class="btn btn-sm btn-warning">Modifier</a>
-                                <a href="<?= site_url('admin/paiements/delete/' . $paiement['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce paiement ?')">Supprimer</a>
-                            </td>
+                            <td><a href="<?= site_url('admin/paiements/edit_statut/' . $paiement['id']) ?>" class="btn btn-sm btn-warning">Modifier Statut</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
