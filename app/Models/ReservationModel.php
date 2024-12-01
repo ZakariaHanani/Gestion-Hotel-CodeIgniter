@@ -19,6 +19,13 @@ class ReservationModel extends Model
 {
     return $this->where('client_id', $clientId)->countAllResults();
 }
+
+    public function getReservationsByClient($clientId)
+    {
+        return $this->where('client_id', $clientId)
+            ->orderBy('chambre_id', 'DESC')
+            ->findAll();
+    }
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
 

@@ -9,7 +9,7 @@ class ClientModel extends UserModel
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id', 'nom', 'prenom', 'telephone', 'adresse', 'created_at', 'updated_at'];
+    protected $allowedFields    = ['nom', 'prenom', 'telephone', 'adresse', 'created_at', 'updated_at'];
 
     public function getClientProfile($clientId)
     {
