@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+//$routes->get('/', 'Home::index');
 $routes->get('/register', 'AuthController::register');
 $routes->post('/store', 'AuthController::store');
 $routes->get('/client', 'AjouterClient::index');
@@ -13,8 +13,20 @@ $routes->post('/client/store', 'AjouterClient::store');
 $routes->get('/login', 'AuthController::login');
 $routes->post('/connexion', 'AuthController::verify_login');
 $routes->get('/logout', 'AuthController::logout');
-
-
+$routes->post('chambres/reserver/(:num)', 'Client\ChambreController::reserver/$1');
+$routes->get('/client/profile', 'Client\ClientController::profile');
+$routes->post('updateProfile', 'Client\ClientController::updateProfile');
+$routes->get('deleteAccount', 'Client\ClientController::deleteAccount');
+$routes->post('payment/createCheckoutSession','Client\PaymentController::createCheckoutSession');
+$routes->get('payment/success', 'Client\PaymentController::success');
+$routes->get('payment/cancel', 'Client\PaymentController::cancel');
+$routes->get('/', 'Client\ChambreController::index');
+$routes->get('client/MesReservation','Client\ClientController::mesReservations');
+$routes->set404Override(
+    function () use ($routes) {
+        return view('Client/errors/error_404');
+    }
+);
 
 $routes->group('admin', function($routes) {
     //Main Routes
