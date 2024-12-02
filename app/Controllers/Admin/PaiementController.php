@@ -13,14 +13,12 @@ class PaiementController extends BaseController
     {
         $paiementModel = new PaiementModel();
     
-        // Récupérer les filtres depuis la requête GET
         $filters = [
             'reservation_id' => $this->request->getGet('reservation_id'),
             'methode' => $this->request->getGet('methode'),
             'statut' => $this->request->getGet('statut'),
         ];
     
-        // Appliquer les filtres au modèle
         $query = $paiementModel;
         if (!empty($filters['reservation_id'])) {
             $query = $query->where('reservation_id', $filters['reservation_id']);
@@ -32,9 +30,8 @@ class PaiementController extends BaseController
             $query = $query->where('statut', $filters['statut']);
         }
     
-        // Récupérer les paiements filtrés
         $data['paiements'] = $query->findAll();
-        $data['filters'] = $filters; // Passer les filtres à la vue pour les garder sélectionnés
+        $data['filters'] = $filters; 
     
         return view('admin/paiements/index', $data);
     }
@@ -78,7 +75,6 @@ class PaiementController extends BaseController
         return redirect()->to('/admin/paiements')->with('error', 'Paiement introuvable');
     }
 
-    // Passer les données à la vue
     $data = [
         'paiement' => $paiement,
     ];
@@ -92,27 +88,22 @@ public function updateStatut($id)
     $paiementModel = new PaiementModel();
     $reservationModel = new ReservationModel();
 
-    // Vérifier si le paiement existe
     $paiement = $paiementModel->find($id);
     if (!$paiement) {
         return redirect()->to('/admin/paiements')->with('error', 'Paiement introuvable');
     }
 
-    // Récupérer le statut depuis le formulaire
     $statutPaiement = $this->request->getPost('statut');
 
-    // Mettre à jour uniquement le statut du paiement
     $paiementModel->update($id, ['statut' => $statutPaiement]);
 
-    // Définir le statut de la réservation en fonction du statut du paiement
-    $statutReservation = 'en attente'; // Par défaut
+    $statutReservation = 'en attente'; 
     if ($statutPaiement === 'effectue') {
         $statutReservation = 'confirmée';
     } elseif ($statutPaiement === 'echoue') {
         $statutReservation = 'annulée';
     }
 
-    // Mettre à jour le statut de la réservation correspondante
     $reservationModel->update($paiement['reservation_id'], ['statut' => $statutReservation]);
 
     return redirect()->to('/admin/paiements')->with('success', 'Statut du paiement et de la réservation mis à jour avec succès');
@@ -121,7 +112,6 @@ public function updateStatut($id)
 
 
 
-    // Generate a financial report for payments
      /* public function generateFinancialReport()
     {
         $model = new PaiementModel();

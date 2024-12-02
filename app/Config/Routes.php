@@ -62,21 +62,12 @@ $routes->group('admin',['filter' => 'AdminAuth'] , function($routes) {
 
     // Routes pour les rapports
     $routes->get('rapport', 'Admin\RapportController::index'); 
-    // Maps to the index method in RapportController. This will display the main reports overview.
-    
     $routes->get('rapport/revenus', 'Admin\RapportController::revenus'); 
-    // Maps to the revenus method in RapportController. This will display the revenue report for a given month/year.
-    
     $routes->get('rapport/telechargerRevenusPDF/(:num)/(:num)', 'Admin\RapportController::telechargerRevenusPDF/$1/$2'); 
-    // Maps to the telechargerRevenusPDF method in RapportController. This will allow downloading the revenue report in PDF format for the given month/year.
-    
-    $routes->get('rapport/chambres-popularite', 'Admin\RapportController::chambresPopularite'); 
-    // Maps to the chambresPopularite method in RapportController. This will display the report for popular room types.
-    
+    $routes->get('rapport/chambres-popularite', 'Admin\RapportController::chambresPopularite');     
 
 
     //Routes pour les type chambre
-
     $routes->get('chambre_type/', 'Admin\ChambreTypeController::index');
     $routes->get('chambre_type/create', 'Admin\ChambreTypeController::create');
     $routes->post('chambre_type/store', 'Admin\ChambreTypeController::store');

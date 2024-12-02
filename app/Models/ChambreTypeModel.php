@@ -1,5 +1,4 @@
 <?php
-// /app/Models/TypeChambreModel.php
 namespace App\Models;
 
 use CodeIgniter\Model;

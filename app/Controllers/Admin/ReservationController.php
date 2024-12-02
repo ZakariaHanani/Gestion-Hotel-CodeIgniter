@@ -157,7 +157,7 @@ class ReservationController extends Controller
             if ($paiement) {
                 $paiementData = [
                     'statut' => $this->getPaiementStatutFromReservation($data['statut']),
-                    'date' => date('Y-m-d H:i:s'), // Mettre à jour la date de modification
+                    'date' => date('Y-m-d H:i:s'), 
                 ];
                 $this->paiementModel->update($paiement['id'], $paiementData);
             }

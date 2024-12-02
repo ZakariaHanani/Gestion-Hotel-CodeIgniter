@@ -19,7 +19,6 @@ class ClientModel extends UserModel
                     ->first();
     }
 
-    // Dates
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';

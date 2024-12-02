@@ -17,6 +17,6 @@ class AdminAuth implements FilterInterface
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
-        // No actions needed after the request
+        
     }
 }
