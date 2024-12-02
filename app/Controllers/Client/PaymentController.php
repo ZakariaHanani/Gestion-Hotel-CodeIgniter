@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 use App\Models\ChambreModel;
 use App\Models\PaiementModel;
 use App\Models\ReservationModel;
-use CodeIgniter\HTTP\ResponseInterface;
 use DateTime;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
