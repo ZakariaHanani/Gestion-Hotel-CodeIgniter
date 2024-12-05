@@ -2,7 +2,7 @@
 
 <?= $this->section('contents') ?>
 <div class="container ">
-    <h2 class="text-center mb-5 pb-3 border-bottom border-3 border-primary fw-bold custom-title">
+    <h2 class="text-center mb-5 pt-4 pb-3 border-bottom border-1 border-primary fw-bold custom-title">
         Découvrez Nos Chambres Disponibles
     </h2>
     <?php if (session()->has('validation')): ?>
@@ -50,11 +50,13 @@
                                     </div>
                                 <?php endif; ?>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Précédent</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Suivant</span>
                             </button>
@@ -84,7 +86,6 @@
         <?php endif; ?>
     </div>
 
-
     <div class="modal fade" id="chambreModal" tabindex="-1" aria-labelledby="chambreModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content shadow-lg">
@@ -98,7 +99,7 @@
                     <img id="chambre_image" class="img-fluid rounded mb-4 shadow-lg" alt="Chambre"
                          style="height: 400px; object-fit: cover;">
 
-                    <h4 id="chambre_numero"  class="text-center text-primary mb-3"></h4>
+                    <h4 id="chambre_numero" class="text-center text-primary mb-3"></h4>
                     <p id="chambre_description" class="text-muted"></p>
                     <p class="fw-bold">
                         <strong>Prix par nuit : </strong>
@@ -123,9 +124,8 @@
         </div>
     </div>
 
-
-
-    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <form action="<?= base_url('payment/createCheckoutSession') ?>" method="post">
                 <?= csrf_field() ?>
@@ -181,56 +181,6 @@
 
 </div>
 
-<!--<script >-->
-<!--    document.addEventListener('DOMContentLoaded', function () {-->
-<!--        const chambreModal = document.getElementById('chambreModal');-->
-<!--        const reservationModal = document.getElementById('reservationModal');-->
-<!--        const reservationButton = document.querySelector('.btn.btn-primary[data-bs-toggle="modal"]');-->
-<!---->
-<!--        let chambreData = {};-->
-<!---->
-<!--        chambreModal.addEventListener('show.bs.modal', function (event) {-->
-<!--            const button = event.relatedTarget;-->
-<!--            chambreData = {-->
-<!--                id: button.getAttribute('data-id'),-->
-<!--                numero: button.getAttribute('data-numero'),-->
-<!--                description: button.getAttribute('data-description'),-->
-<!--                prix: button.getAttribute('data-prix'),-->
-<!--                image: button.getAttribute('data-image')-->
-<!--            };-->
-<!--            reservationButton.setAttribute('data-id', chambreData.id);-->
-<!--            reservationButton.setAttribute('data-numero', chambreData.numero);-->
-<!--            reservationButton.setAttribute('data-prix', chambreData.prix);-->
-<!---->
-<!--            // Mise à jour des informations du modal-->
-<!--            chambreModal.querySelector('#chambre_numero').textContent = 'Chambre N° ' + chambreData.numero;-->
-<!--            chambreModal.querySelector('#chambre_description').textContent = chambreData.description;-->
-<!--            chambreModal.querySelector('#chambre_prix').textContent = chambreData.prix ;-->
-<!--            chambreModal.querySelector('#chambre_image').src = chambreData.image;-->
-<!--        });-->
-<!---->
-<!--        reservationModal.addEventListener('show.bs.modal', function (event) {-->
-<!--            const button = event.relatedTarget;-->
-<!--            const isFromChambreModal = button && button.dataset.id;-->
-<!---->
-<!--            if (isFromChambreModal) {-->
-<!--                chambreData = {-->
-<!--                    id: button.getAttribute('data-id'),-->
-<!--                    numero: button.getAttribute('data-numero'),-->
-<!--                    prix: button.getAttribute('data-prix')-->
-<!--                };-->
-<!---->
-<!--            }-->
-<!---->
-<!--            reservationModal.querySelector('#chambre_id').value = chambreData.id;-->
-<!--            reservationModal.querySelector('#reservation_chambre_numero').textContent = chambreData.numero;-->
-<!--            reservationModal.querySelector('#reservation_chambre_prix').textContent = chambreData.prix + ' MAD';-->
-<!--        });-->
-<!--    });-->
-<!---->
-<!---->
-<!---->
-<!--</script>-->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const chambreModal = document.getElementById('chambreModal');
@@ -239,7 +189,7 @@
         const dateDebutInput = document.getElementById('date_debut');
         const dateFinInput = document.getElementById('date_fin');
         const montantTotalElement = document.getElementById('montant_total');
-        const prixParNuitElement = document.getElementById('reservation_chambre_prix'); // L'élément pour récupérer le prix par nuit
+        const prixParNuitElement = document.getElementById('reservation_chambre_prix');
 
         let chambreData = {};
 
@@ -256,9 +206,9 @@
                 if (diffDays >= 1) {
                     // Calculer le montant total
                     const montantTotal = chambreData.prix * diffDays;
-                    montantTotalElement.textContent = montantTotal.toFixed(2); // Afficher le montant total
+                    montantTotalElement.textContent = montantTotal.toFixed(2);
                 } else {
-                    montantTotalElement.textContent = '0'; // Si la période est trop courte
+                    montantTotalElement.textContent = '0';
                 }
             }
         }
@@ -279,7 +229,7 @@
             // Mise à jour des informations du modal
             chambreModal.querySelector('#chambre_numero').textContent = 'Chambre N° ' + chambreData.numero;
             chambreModal.querySelector('#chambre_description').textContent = chambreData.description;
-            chambreModal.querySelector('#chambre_prix').textContent = chambreData.prix ;
+            chambreModal.querySelector('#chambre_prix').textContent = chambreData.prix;
             chambreModal.querySelector('#chambre_image').src = chambreData.image;
         });
 
@@ -299,10 +249,8 @@
             reservationModal.querySelector('#reservation_chambre_numero').textContent = chambreData.numero;
             reservationModal.querySelector('#reservation_chambre_prix').textContent = chambreData.prix + ' MAD';
 
-            // Réinitialisation du montant total à chaque ouverture de la modal
             montantTotalElement.textContent = '0';
 
-            // Mettre à jour les prix par nuit
             prixParNuitElement.textContent = chambreData.prix + ' MAD';
 
             // Ajouter un événement sur les dates pour calculer le montant total
