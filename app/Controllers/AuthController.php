@@ -25,8 +25,9 @@ class AuthController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
-            $data['validation'] = $this->validator;
-            return view('auth/register', $data);
+            return view('auth/register', ['validation' => $this->validator,
+                   'data' => $data,
+            ]);
         }
 
         if ($usermodel->save([
@@ -77,8 +78,7 @@ class AuthController extends BaseController
     {
         $data = [];
         $usermodel = new UserModel();
-
-        // Validation des règles
+        $clientmodel=new ClientModel();
         $rules = [
             'email'    => 'required|valid_email',
             'password' => 'required'
@@ -90,11 +90,14 @@ class AuthController extends BaseController
             return view('auth/login', $data);
         }
         $user = $usermodel->where('email', $this->request->getPost('email'))->first();
+        $client = $clientmodel->where('user_id', $user['id'])->first();
+        $nom=$client['nom'];
 
         if ($user && password_verify($this->request->getPost('password'), $user['password'])) {
             session()->set([
                 'user_id'=>$user['id'],
                 'email'     => $user['email'],
+                'nom'  => $nom,
                 'role'      => $user['role'],
                 'logged_in' => true
             ]);

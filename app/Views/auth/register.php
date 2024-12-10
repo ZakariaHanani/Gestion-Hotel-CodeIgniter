@@ -1,7 +1,7 @@
 <?= $this->extend('Client\home') ?>
 
 <?= $this->section('contents') ?>
-<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh; background-size: cover; background-position: center;">
+<div class="d-flex align-items-center justify-content-center p-5 m-5" style="min-height: 100vh; background-size: cover; background-position: center;">
     <div class="login-box p-4 shadow-lg rounded-4 bg-white" style="width: 600px;">
         <div class="text-center mb-4">
             <h3 class="text-primary fw-bold">Inscription</h3>
@@ -21,12 +21,12 @@
                             name="email"
                             id="email"
                             class="form-control"
-                            placeholder="Entrez votre email"
-                            value="<?= old('email') ?>"
+                            placeholder="Entrez votre Email"
+                            value="<?= esc($data['email'] ?? '') ?>"
                             required>
                 </div>
-                <?php if (isset($validation) && $validation->hasError('email')): ?>
-                    <div class="text-danger"><?= $validation->getError('email') ?></div>
+                <?php if (isset($validation) && $validation->hasError('email')) : ?>
+                    <span class="text-danger"><?= $validation->getError('email') ?></span>
                 <?php endif; ?>
             </div>
 
@@ -39,10 +39,10 @@
                         id="nom"
                         class="form-control"
                         placeholder="Entrez votre nom"
-                        value="<?= old('nom') ?>"
+                        value="<?= esc($data['nom'] ?? '') ?>"
                         required>
-                <?php if (isset($validation) && $validation->hasError('nom')): ?>
-                    <div class="text-danger"><?= $validation->getError('nom') ?></div>
+                <?php if (isset($validation) && $validation->hasError('nom')) : ?>
+                    <span class="text-danger"><?= $validation->getError('nom') ?></span>
                 <?php endif; ?>
             </div>
 
@@ -55,23 +55,22 @@
                         id="prenom"
                         class="form-control"
                         placeholder="Entrez votre prénom"
-                        value="<?= old('prenom') ?>"
+                        value="<?= esc($data['prenom'] ?? '') ?>"
                         required>
-                <?php if (isset($validation) && $validation->hasError('prenom')): ?>
-                    <div class="text-danger"><?= $validation->getError('prenom') ?></div>
+                <?php if (isset($validation) && $validation->hasError('prenom')) : ?>
+                    <span class="text-danger"><?= $validation->getError('prenom') ?></span>
                 <?php endif; ?>
             </div>
             <div class="mb-3">
                 <label for="country" class="form-label fw-bold text-muted">Pays</label>
-                <select name="adresse" id="country" class="form-select" required>
-                    <option value="">Sélectionnez votre pays</option>
+                <select name="adresse" id="country" class="form-select" >
+                    <option value="<?= esc($data['adresse'] ?? '') ?>">Sélectionnez votre pays</option>
 
                 </select>
-                <?php if (isset($validation) && $validation->hasError('adresse')): ?>
-                    <div class="text-danger"><?= $validation->getError('adresse') ?></div>
+                <?php if (isset($validation) && $validation->hasError('adresse')) : ?>
+                    <span class="text-danger"><?= $validation->getError('adresse') ?></span>
                 <?php endif; ?>
             </div>
-
 
 
             <div class="mb-3">
@@ -84,11 +83,11 @@
                             id="telephone"
                             class="form-control <?= isset($validation) && $validation->hasError('telephone') ? 'is-invalid' : '' ?>"
                             placeholder="Entrez votre téléphone"
-                            value="<?= old('telephone') ?>"
+                            value="<?= esc($data['telephone'] ?? '') ?>"
                             required>
                 </div>
-                <?php if (isset($validation) && $validation->hasError('telephone')): ?>
-                    <div class="text-danger"><?= $validation->getError('telephone') ?></div>
+                <?php if (isset($validation) && $validation->hasError('telephone')) : ?>
+                    <span class="text-danger"><?= $validation->getError('telephone') ?></span>
                 <?php endif; ?>
             </div>
 
@@ -105,8 +104,8 @@
                             placeholder="Entrez votre mot de passe"
                             required>
                 </div>
-                <?php if (isset($validation) && $validation->hasError('password')): ?>
-                    <div class="text-danger"><?= $validation->getError('password') ?></div>
+                <?php if (isset($validation) && $validation->hasError('password')) : ?>
+                    <span class="text-danger"><?= $validation->getError('password') ?></span>
                 <?php endif; ?>
             </div>
 
@@ -123,8 +122,8 @@
                             placeholder="Confirmez votre mot de passe"
                             required>
                 </div>
-                <?php if (isset($validation) && $validation->hasError('password_confirm')): ?>
-                    <div class="text-danger"><?= $validation->getError('password_confirm') ?></div>
+                <?php if (isset($validation) && $validation->hasError('password_confirm')) : ?>
+                    <span class="text-danger"><?= $validation->getError('password_confirm') ?></span>
                 <?php endif; ?>
             </div>
 
@@ -136,14 +135,14 @@
 
         <div class="text-center">
             <p class="mb-1">
-                <a href="<?= base_url('login') ?>" class="text-decoration-none text-muted">Vous avez déjà un compte ?</a>
+                <a href="<?= base_url('login') ?>" class="text-decoration-none text-muted">Vous avez déjà un compte
+                    ?</a>
             </p>
         </div>
     </div>
 </div>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     async function fetchCountries() {
@@ -174,7 +173,6 @@
         }
     }
 
-    // Attendre que le DOM soit prêt avant d'exécuter la fonction
     document.addEventListener('DOMContentLoaded', fetchCountries);
 </script>
 
