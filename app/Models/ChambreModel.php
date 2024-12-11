@@ -1,5 +1,4 @@
 <?php
-// app/Models/ChambreModel.php
 namespace App\Models;
 
 use CodeIgniter\Model;
@@ -12,7 +11,7 @@ class ChambreModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['numero', 'prix','description', 'statut', 'type_chambre_id'];
+    protected $allowedFields    = ['numero', 'type','prix','description', 'statut', 'type_chambre_id'];
 
     public function getChambreById($id)
     {

@@ -4,7 +4,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+//$routes->get('/', 'Home::index');
 $routes->get('/register', 'AuthController::register');
 $routes->post('/store', 'AuthController::store');
 $routes->get('/client', 'AjouterClient::index');
@@ -12,6 +12,21 @@ $routes->post('/client/store', 'AjouterClient::store');
 $routes->get('/login', 'AuthController::login');
 $routes->post('/connexion', 'AuthController::verify_login');
 $routes->get('/logout', 'AuthController::logout');
+$routes->post('chambres/reserver/(:num)', 'Client\ChambreController::reserver/$1');
+$routes->get('/client/profile', 'Client\ClientController::profile');
+$routes->post('updateProfile', 'Client\ClientController::updateProfile');
+$routes->get('deleteAccount', 'Client\ClientController::deleteAccount');
+$routes->post('payment/createCheckoutSession','Client\PaymentController::createCheckoutSession');
+$routes->get('payment/success', 'Client\PaymentController::success');
+$routes->get('payment/cancel', 'Client\PaymentController::cancel');
+$routes->get('/', 'Client\ChambreController::index');
+$routes->get('client/MesReservation','Client\ClientController::mesReservations');
+$routes->set404Override(
+    function () use ($routes) {
+        return view('Client/errors/error_404');
+    }
+);
+
 
 
 $routes->group('admin',['filter' => 'AdminAuth'] , function($routes) {
@@ -65,6 +80,18 @@ $routes->group('admin',['filter' => 'AdminAuth'] , function($routes) {
     $routes->get('rapport/revenus', 'Admin\RapportController::revenus'); 
     $routes->get('rapport/telechargerRevenusPDF/(:num)/(:num)', 'Admin\RapportController::telechargerRevenusPDF/$1/$2'); 
     $routes->get('rapport/chambres-popularite', 'Admin\RapportController::chambresPopularite');     
+    $routes->get('rapport', 'Admin\RapportController::index');
+    // Maps to the index method in RapportController. This will display the main reports overview.
+
+    $routes->get('rapport/revenus', 'Admin\RapportController::revenus');
+    // Maps to the revenus method in RapportController. This will display the revenue report for a given month/year.
+
+    $routes->get('rapport/telechargerRevenusPDF/(:num)/(:num)', 'Admin\RapportController::telechargerRevenusPDF/$1/$2');
+    // Maps to the telechargerRevenusPDF method in RapportController. This will allow downloading the revenue report in PDF format for the given month/year.
+
+    $routes->get('rapport/chambres-popularite', 'Admin\RapportController::chambresPopularite');
+    // Maps to the chambresPopularite method in RapportController. This will display the report for popular room types.
+
 
 
     //Routes pour les type chambre

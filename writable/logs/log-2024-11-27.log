@@ -1,0 +1,120 @@
+ERROR - 2024-11-27 20:11:48 --> Error connecting to the database: mysqli_sql_exception: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'gestion_hotel', 3306, '', 0)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `chambre...', Array, false)
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Models\ChambreModel.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Controllers\Client\ChambreController.php(22): App\Models\ChambreModel->getDisponibleChambre()
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Client\ChambreController->index()
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\ChambreController))
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\rewrite.php(44): require_once('C:\\Users\\Hp\\Des...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée in C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `chambre...', Array, false)
+#3 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Models\ChambreModel.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\app\Controllers\Client\ChambreController.php(22): App\Models\ChambreModel->getDisponibleChambre()
+#7 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Client\ChambreController->index()
+#8 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\ChambreController))
+#9 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Hp\Desktop\Gestion-Hotel-CodeIgniter\system\rewrite.php(44): require_once('C:\\Users\\Hp\\Des...')
+#14 {main}
+CRITICAL - 2024-11-27 20:11:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `chambres`.*
+FROM `chambres`
+WHERE `chambres`.`statut` = :chambres.statut:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ChambreModel.php(23): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Client\ChambreController.php(22): App\Models\ChambreModel->getDisponibleChambre()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Client\ChambreController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\ChambreController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+INFO - 2024-11-27 20:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-27 20:16:36 --> ErrorException: Undefined array key "nom"
+[Method: POST, Route: payment/createCheckoutSession/6]
+in APPPATH\Controllers\Client\PaymentController.php on line 30.
+ 1 APPPATH\Controllers\Client\PaymentController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nom"', 'C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\app\\Controllers\\Client\\PaymentController.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Client\PaymentController->createCheckoutSession('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\PaymentController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp\\Desktop\\Gestion-Hotel-CodeIgniter\\public\\index.php')
+INFO - 2024-11-27 20:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 20:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 21:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 21:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 21:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 21:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 21:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

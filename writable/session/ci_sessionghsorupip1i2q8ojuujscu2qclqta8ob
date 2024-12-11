@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1732661667;_ci_previous_url|s:36:"http://localhost:8081/client/profile";user_id|s:1:"6";email|s:16:"tagarte@site.com";role|s:6:"client";logged_in|b:1;reservation_data|a:4:{s:10:"chambre_id";s:1:"6";s:10:"date_debut";s:10:"2024-11-27";s:8:"date_fin";s:10:"2024-11-28";s:13:"montant_total";i:1020;}

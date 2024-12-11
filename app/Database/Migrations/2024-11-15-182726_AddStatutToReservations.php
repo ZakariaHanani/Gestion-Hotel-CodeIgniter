@@ -14,7 +14,7 @@ class AddStatutToReservations extends Migration
                 'constraint' => ['en attente', 'confirmée', 'annulée', 'terminée'],
                 'default'    => 'en attente',
                 'null'       => false,
-                'after'      => 'date_fin', // Ajoute la colonne après `date_fin`
+                'after'      => 'date_fin', 
             ],
         ];
 

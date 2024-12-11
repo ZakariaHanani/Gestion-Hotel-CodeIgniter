@@ -92,26 +92,22 @@ class ClientController extends BaseController
             ])) {
                 return redirect()->to('/admin/clients') ;
         } else {
-            // Log model-specific errors
             log_message('error', 'Erreur lors de l\'insertion dans la table clients: ' . json_encode($this->clientModel->errors()));
             return redirect()->back()->with('error', 'Erreur d\'insertion dans la table clients.');
         }
     } else {
-        // Log model-specific errors
         log_message('error', 'Erreur lors de l\'insertion dans la table users: ' . json_encode($this->usermodel->errors()));
         return redirect()->back()->with('error', 'Erreur d\'insertion dans la table users.');
     }
         
     }
 
-    // Affiche le formulaire d’édition d’un client
     public function edit($clientId)
     {
         $data['client'] = $this->clientModel->find($clientId);
         return view('admin/clients/edit', $data);
     }
 
-    // Met à jour les informations d'un client
     public function update($clientId)
     {
         $this->clientModel->update($clientId, [
@@ -123,7 +119,6 @@ class ClientController extends BaseController
         return redirect()->to('/admin/clients')->with('message', 'Client mis à jour avec succès');
     }
     
-    // Supprime un client
     public function delete($clientId)
     {
         $this->clientModel->delete($clientId);

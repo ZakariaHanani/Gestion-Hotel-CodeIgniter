@@ -57,6 +57,7 @@
         "test": "phpunit"
     },
     "require": {
-        "dompdf/dompdf": "^3.0"
+        "dompdf/dompdf": "^3.0",
+        "stripe/stripe-php": "^16.3"
     }
 }
