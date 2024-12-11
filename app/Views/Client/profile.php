@@ -1,69 +1,74 @@
 <?= $this->extend('Client\home') ?>
 
 <?= $this->section('contents') ?>
-<div class="container py-5">
+<div class="py-5 mb-5 mt-2">
     <?php if (session()->has('seccuss')): ?>
-        <div class="alert alert-success text-center fadeInDown">
-            <?= esc(session('seccuss')) ?>
+        <div class="alert alert-success ml-5 mr-5 text-center animate__animated animate__fadeInDown">
+            <i class="fas fa-check-circle me-2"></i> <?= esc(session('seccuss')) ?>
         </div>
     <?php endif; ?>
 
     <div class="row justify-content-center">
-        <div class="col-lg-7 col-md-10 animate__animated animate__backInUp" >
-            <div class="card shadow-lg border-0 rounded">
-                <div class="card-header text-center py-2 bg-primary text-white rounded-top">
-                    <h2 class="mb-0">Mon Profil</h2>
+        <div class="col-lg-5">
+            <div class="card border-0 shadow-lg rounded">
+
+                <div class="card-header bg-light-subtle text-center rounded-top py-2">
+                    <div class="text-center">
+                        <img src="<?= base_url('assets/images/user.png') ?>" alt="Photo de profil" class="rounded-circle shadow h-25" width="100">
+                    </div>
                 </div>
 
-                <div class="card-body p-4 bg-light">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class=" w-100">
-                            <p class="mb-4 fadeInLeft"><i class="fas fa-user me-2 text-primary"></i><strong>Nom :</strong> <?= $client['nom'] ?? '<span class="text-muted">Non renseigné</span>' ?></p>
-                            <p class="mb-4 fadeInLeft"><i class="fas fa-user-tag me-2 text-primary"></i><strong>Prénom :</strong> <?= $client['prenom'] ?? '<span class="text-muted">Non renseigné</span>' ?></p>
-                            <p class="mb-4 fadeInLeft"><i class="fas fa-map-marker-alt me-2 text-primary"></i><strong>Adresse :</strong> <?= $client['adresse'] ?? '<span class="text-muted">Non renseignée</span>' ?></p>
-                            <p class="mb-4 fadeInLeft"><i class="fas fa-phone me-2 text-primary"></i><strong>Téléphone :</strong> <?= $client['telephone'] ?? '<span class="text-muted">Non renseigné</span>' ?></p>
+                <div class="card-body bg-light p-5">
+                    <div class=" gy-4">
+                        <div class="col-md-6">
+                            <p><strong class="text-primary">Nom :</strong><br> <?= $client['nom'] ?? '<span class="text-muted">Non renseigné</span>' ?></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong class="text-primary">Prénom :</strong> <br><?= $client['prenom'] ?? '<span class="text-muted">Non renseigné</span>' ?></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong class="text-primary">Téléphone :</strong> <br><?= $client['telephone'] ?? '<span class="text-muted">Non renseigné</span>' ?></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong class="text-primary">Adresse :</strong> <br><?= $client['adresse'] ?? '<span class="text-muted">Non renseignée</span>' ?></p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pied de carte avec boutons -->
-                <div class="card-footer bg-white d-flex justify-content-around py-3">
-                    <button class="btn btn-outline-primary animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#editProfileModal">
-                        <i class="fas fa-user-edit"></i> Modifier
+                <!-- Footer -->
+                <div class="card-footer bg-white d-flex justify-content-between py-3">
+                    <button class="btn btn-outline-primary px-4" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                        <i class="fas fa-edit me-1"></i> Modifier Profil
                     </button>
-                    <form action="<?= base_url('deleteAccount') ?>" method="get" class="d-inline-block" id="deleteAccountForm">
-                        <?= csrf_field() ?>
-                        <button type="button" class="btn btn-outline-danger animate__animated animate__fadeIn animate__delay-2s" id="deleteAccountButton">
-                            <i class="fas fa-trash"></i> Supprimer
-                        </button>
-                    </form>
+                    <button class="btn btn-outline-danger px-4 ml-5" id="deleteAccountButton">
+                        <i class="fas fa-trash-alt "></i> Supprimer Compte
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 </div>
 
 <!-- Modal Modifier Profil -->
-<div class="modal fade <?= session('errors') ? 'show' : '' ?>" id="editProfileModal" tabindex="-1"
-     aria-labelledby="editProfileModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered animate__animated animate__zoomIn">
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
+            <div class="modal-header bg-gradient-primary text-white">
                 <h5 class="modal-title" id="editProfileModalLabel">Modifier mon profil</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <form action="<?= base_url('updateProfile') ?>" method="post">
-                <div class="modal-body bg-light">
-                    <!-- Formulaire de modification -->
+                <div class="modal-body">
                     <div class="mb-3">
                         <label for="nom" class="form-label">Nom</label>
                         <input type="text" name="nom" id="nom"
                                class="form-control <?= session('errors.nom') ? 'is-invalid' : '' ?>"
                                value="<?= old('nom', $client['nom'] ?? '') ?>">
                         <?php if (session('errors.nom')): ?>
-                            <div class="invalid-feedback">
-                                <?= esc(session('errors.nom')) ?>
-                            </div>
+                            <div class="invalid-feedback"><?= esc(session('errors.nom')) ?></div>
                         <?php endif; ?>
                     </div>
                     <div class="mb-3">
@@ -72,9 +77,7 @@
                                class="form-control <?= session('errors.prenom') ? 'is-invalid' : '' ?>"
                                value="<?= old('prenom', $client['prenom'] ?? '') ?>">
                         <?php if (session('errors.prenom')): ?>
-                            <div class="invalid-feedback">
-                                <?= esc(session('errors.prenom')) ?>
-                            </div>
+                            <div class="invalid-feedback"><?= esc(session('errors.prenom')) ?></div>
                         <?php endif; ?>
                     </div>
                     <div class="mb-3">
@@ -83,9 +86,7 @@
                                class="form-control <?= session('errors.adresse') ? 'is-invalid' : '' ?>"
                                value="<?= old('adresse', $client['adresse'] ?? '') ?>">
                         <?php if (session('errors.adresse')): ?>
-                            <div class="invalid-feedback">
-                                <?= esc(session('errors.adresse')) ?>
-                            </div>
+                            <div class="invalid-feedback"><?= esc(session('errors.adresse')) ?></div>
                         <?php endif; ?>
                     </div>
                     <div class="mb-3">
@@ -94,9 +95,7 @@
                                class="form-control <?= session('errors.telephone') ? 'is-invalid' : '' ?>"
                                value="<?= old('telephone', $client['telephone'] ?? '') ?>">
                         <?php if (session('errors.telephone')): ?>
-                            <div class="invalid-feedback">
-                                <?= esc(session('errors.telephone')) ?>
-                            </div>
+                            <div class="invalid-feedback"><?= esc(session('errors.telephone')) ?></div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -110,20 +109,21 @@
     </div>
 </div>
 
-<!-- Script JavaScript -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        if (<?= json_encode(session('errors') !== null) ?>) {
-            var modal = new bootstrap.Modal(document.getElementById('editProfileModal'));
-            modal.show();
+
+        const hasErrors = <?= session('errors') ? 'true' : 'false' ?>;
+        if (hasErrors) {
+            const editProfileModal = new bootstrap.Modal(document.getElementById('editProfileModal'));
+            editProfileModal.show(); // Affiche le modal
         }
     });
-
-    document.getElementById('deleteAccountButton').addEventListener('click', function () {
-        const confirmation = confirm("Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.");
-        if (confirmation) {
-            document.getElementById('deleteAccountForm').submit();
-        }
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('deleteAccountButton').addEventListener('click', function () {
+            if (confirm("Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.")) {
+                document.getElementById('deleteAccountForm').submit();
+            }
+        });
     });
 </script>
 
