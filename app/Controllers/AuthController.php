@@ -90,14 +90,12 @@ class AuthController extends BaseController
             return view('auth/login', $data);
         }
         $user = $usermodel->where('email', $this->request->getPost('email'))->first();
-        $client = $clientmodel->where('user_id', $user['id'])->first();
-        $nom=$client['nom'];
+
 
         if ($user && password_verify($this->request->getPost('password'), $user['password'])) {
             session()->set([
                 'user_id'=>$user['id'],
                 'email'     => $user['email'],
-                'nom'  => $nom,
                 'role'      => $user['role'],
                 'logged_in' => true
             ]);
@@ -105,6 +103,9 @@ class AuthController extends BaseController
             if ($user['role'] === 'admin') {
                 return redirect()->to('admin/')->with('success', 'Bienvenue, administrateur !');
             } else {
+                $client = $clientmodel->where('user_id', $user['id'])->first();
+                $nom=$client['nom'];
+                session()->set(['nom'=>$nom]);
                 return redirect()->to('/')->with('success', 'Connexion réussie !');
             }
         } else {
