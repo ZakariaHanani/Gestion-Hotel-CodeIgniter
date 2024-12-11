@@ -25,8 +25,9 @@ class AuthController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
-            $data['validation'] = $this->validator;
-            return view('auth/register', $data);
+            return view('auth/register', ['validation' => $this->validator,
+                   'data' => $data,
+            ]);
         }
 
         if ($usermodel->save([
@@ -77,8 +78,7 @@ class AuthController extends BaseController
     {
         $data = [];
         $usermodel = new UserModel();
-
-        // Validation des règles
+        $clientmodel=new ClientModel();
         $rules = [
             'email'    => 'required|valid_email',
             'password' => 'required'
@@ -91,6 +91,7 @@ class AuthController extends BaseController
         }
         $user = $usermodel->where('email', $this->request->getPost('email'))->first();
 
+
         if ($user && password_verify($this->request->getPost('password'), $user['password'])) {
             session()->set([
                 'user_id'=>$user['id'],
@@ -102,6 +103,9 @@ class AuthController extends BaseController
             if ($user['role'] === 'admin') {
                 return redirect()->to('admin/')->with('success', 'Bienvenue, administrateur !');
             } else {
+                $client = $clientmodel->where('user_id', $user['id'])->first();
+                $nom=$client['nom'];
+                session()->set(['nom'=>$nom]);
                 return redirect()->to('/')->with('success', 'Connexion réussie !');
             }
         } else {

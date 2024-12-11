@@ -53,7 +53,7 @@ class ClientController extends BaseController
         if (!$this->validate($rules)) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
-
+        session()->set(['nom'=>$this->request->getPost('nom')]);
         $clientModel = new ClientModel();
         $update = $clientModel->update(session()->get('user_id'), [
             'nom' => $this->request->getPost('nom'),

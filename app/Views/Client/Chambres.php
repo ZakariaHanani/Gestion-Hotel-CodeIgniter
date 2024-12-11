@@ -1,24 +1,40 @@
 <?= $this->extend('Client\home') ?>
 
 <?= $this->section('contents') ?>
-<div class="container ">
-    <h2 class="text-center mb-5 pb-3 border-bottom border-3 border-primary fw-bold custom-title">
-        Découvrez Nos Chambres Disponibles
-    </h2>
-    <?php if (session()->has('validation')): ?>
-        <p class="alert alert-danger"><?= session()->getFlashdata('validation') ?></p>
-    <?php endif; ?>
-    <?php if (session()->has('error')): ?>
-        <div class="alert alert-danger"><?= session('error') ?></div>
-    <?php endif; ?>
-    <?php if (session()->has('success')): ?>
-        <div class="alert alert-success"><?= esc(session('success')) ?></div>
-    <?php endif; ?>
+<div>
+    <section class="hero d-flex align-items-center justify-content-center text-center">
+        <div class="overlay"></div>
+        <div class="content">
 
-    <div class="row g-4">
+            <?php if (session()->has('validation')): ?>
+                <p class="alert alert-danger"><?= session()->getFlashdata('validation') ?></p>
+            <?php endif; ?>
+            <?php if (session()->has('error')): ?>
+                <div class="alert alert-danger"><?= session('error') ?></div>
+            <?php endif; ?>
+            <?php if (session()->has('success')): ?>
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+                <?php endif; ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= esc(session('success')) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
+
+
+            <h1>Bienvenue à l'Hôtel Luxe</h1>
+            <p>Vivez une expérience inoubliable dans notre établissement de classe mondiale.</p>
+            <a href="#services" class="btn btn-primary">Explorer Nos Services</a>
+        </div>
+    </section>
+
+
+    <div class="row container-fluid row m-1 py-5" id="services">
+        <h2 class="text-center mb-4">Nos Services</h2>
         <?php if (!empty($chambres) && is_array($chambres)): ?>
             <?php foreach ($chambres as $chambre): ?>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-primary text-white text-center">
                             <h5 class="card-title mb-0">Chambre <?= esc($chambre['numero']) ?></h5>
@@ -43,18 +59,20 @@
                                     <?php endforeach; ?>
                                 <?php else: ?>
                                     <div class="carousel-item active">
-                                        <img src="<?= base_url('uploads/chambres/default.jpg') ?>"
+                                        <img src="<?= base_url('uploads/chambres/1732452776_81f18d8aa2449eef306c.jpg') ?>"
                                              class="d-block w-100 rounded-bottom"
                                              alt="Image par défaut"
                                              style="height: 250px; object-fit: cover;">
                                     </div>
                                 <?php endif; ?>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Précédent</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselChambre<?= $chambre['id'] ?>" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Suivant</span>
                             </button>
@@ -84,7 +102,6 @@
         <?php endif; ?>
     </div>
 
-
     <div class="modal fade" id="chambreModal" tabindex="-1" aria-labelledby="chambreModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content shadow-lg">
@@ -95,10 +112,10 @@
                 </div>
 
                 <div class="modal-body">
+                    <h4 id="chambre_numero" class="text-center text-primary mb-3"></h4>
                     <img id="chambre_image" class="img-fluid rounded mb-4 shadow-lg" alt="Chambre"
                          style="height: 400px; object-fit: cover;">
 
-                    <h4 id="chambre_numero"  class="text-center text-primary mb-3"></h4>
                     <p id="chambre_description" class="text-muted"></p>
                     <p class="fw-bold">
                         <strong>Prix par nuit : </strong>
@@ -123,9 +140,8 @@
         </div>
     </div>
 
-
-
-    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <form action="<?= base_url('payment/createCheckoutSession') ?>" method="post">
                 <?= csrf_field() ?>
@@ -178,59 +194,61 @@
         </div>
     </div>
 
+    <div class="container bg-light p-5 mt-5 mb-5" id="contact" style="max-width: 800px;">
+        <h2 class="text-center mb-4 text-primary">Contactez-nous</h2>
+        <form action="<?= base_url('contact/send') ?>" method="post">
+            <?= csrf_field() ?>
+
+            <div class="mb-4">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" name="nom" id="nom"
+                       class="form-control <?= session('errors.nom') ? 'is-invalid' : '' ?>"
+                       value="<?= (session()->get('logged_in')) ? session()->get('nom') : '' ?>" required
+                       style="border-radius: 10px;">
+                <?php if (session('errors.nom')): ?>
+                    <div class="invalid-feedback"><?= esc(session('errors.nom')) ?></div>
+                <?php endif; ?>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email"
+                       class="form-control <?= session('errors.email') ? 'is-invalid' : '' ?>"
+                       value="<?= (session()->get('logged_in')) ? session()->get('email') : '' ?>" required
+                       style="border-radius: 10px;">
+                <?php if (session('errors.email')): ?>
+                    <div class="invalid-feedback"><?= esc(session('errors.email')) ?></div>
+                <?php endif; ?>
+            </div>
+
+            <div class="mb-4">
+                <label for="sujet" class="form-label">Sujet</label>
+                <input type="text" name="sujet" id="sujet"
+                       class="form-control <?= session('errors.sujet') ? 'is-invalid' : '' ?>"
+                       value="<?= old('sujet') ?>" required
+                       style="border-radius: 10px;">
+                <?php if (session('errors.sujet')): ?>
+                    <div class="invalid-feedback"><?= esc(session('errors.sujet')) ?></div>
+                <?php endif; ?>
+            </div>
+
+            <div class="mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea name="message" id="message" rows="5"
+                          class="form-control <?= session('errors.message') ? 'is-invalid' : '' ?>"
+                          required style="border-radius: 10px;"><?= old('message') ?></textarea>
+                <?php if (session('errors.message')): ?>
+                    <div class="invalid-feedback"><?= esc(session('errors.message')) ?></div>
+                <?php endif; ?>
+            </div>
+            <div class="text-center">
+
+            <button type="submit" class="btn btn-primary btn-lg " style="border-radius: 20px; padding: 12px;">Envoyer</button>
+            </div>
+        </form>
+    </div>
 
 </div>
-
-<!--<script >-->
-<!--    document.addEventListener('DOMContentLoaded', function () {-->
-<!--        const chambreModal = document.getElementById('chambreModal');-->
-<!--        const reservationModal = document.getElementById('reservationModal');-->
-<!--        const reservationButton = document.querySelector('.btn.btn-primary[data-bs-toggle="modal"]');-->
-<!---->
-<!--        let chambreData = {};-->
-<!---->
-<!--        chambreModal.addEventListener('show.bs.modal', function (event) {-->
-<!--            const button = event.relatedTarget;-->
-<!--            chambreData = {-->
-<!--                id: button.getAttribute('data-id'),-->
-<!--                numero: button.getAttribute('data-numero'),-->
-<!--                description: button.getAttribute('data-description'),-->
-<!--                prix: button.getAttribute('data-prix'),-->
-<!--                image: button.getAttribute('data-image')-->
-<!--            };-->
-<!--            reservationButton.setAttribute('data-id', chambreData.id);-->
-<!--            reservationButton.setAttribute('data-numero', chambreData.numero);-->
-<!--            reservationButton.setAttribute('data-prix', chambreData.prix);-->
-<!---->
-<!--            // Mise à jour des informations du modal-->
-<!--            chambreModal.querySelector('#chambre_numero').textContent = 'Chambre N° ' + chambreData.numero;-->
-<!--            chambreModal.querySelector('#chambre_description').textContent = chambreData.description;-->
-<!--            chambreModal.querySelector('#chambre_prix').textContent = chambreData.prix ;-->
-<!--            chambreModal.querySelector('#chambre_image').src = chambreData.image;-->
-<!--        });-->
-<!---->
-<!--        reservationModal.addEventListener('show.bs.modal', function (event) {-->
-<!--            const button = event.relatedTarget;-->
-<!--            const isFromChambreModal = button && button.dataset.id;-->
-<!---->
-<!--            if (isFromChambreModal) {-->
-<!--                chambreData = {-->
-<!--                    id: button.getAttribute('data-id'),-->
-<!--                    numero: button.getAttribute('data-numero'),-->
-<!--                    prix: button.getAttribute('data-prix')-->
-<!--                };-->
-<!---->
-<!--            }-->
-<!---->
-<!--            reservationModal.querySelector('#chambre_id').value = chambreData.id;-->
-<!--            reservationModal.querySelector('#reservation_chambre_numero').textContent = chambreData.numero;-->
-<!--            reservationModal.querySelector('#reservation_chambre_prix').textContent = chambreData.prix + ' MAD';-->
-<!--        });-->
-<!--    });-->
-<!---->
-<!---->
-<!---->
-<!--</script>-->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const chambreModal = document.getElementById('chambreModal');
@@ -239,26 +257,26 @@
         const dateDebutInput = document.getElementById('date_debut');
         const dateFinInput = document.getElementById('date_fin');
         const montantTotalElement = document.getElementById('montant_total');
-        const prixParNuitElement = document.getElementById('reservation_chambre_prix'); // L'élément pour récupérer le prix par nuit
+        const prixParNuitElement = document.getElementById('reservation_chambre_prix');
 
         let chambreData = {};
 
-        // Fonction pour calculer le montant total
+
         function calculerMontantTotal() {
             const dateDebut = new Date(dateDebutInput.value);
             const dateFin = new Date(dateFinInput.value);
 
             if (dateDebut && dateFin && dateFin >= dateDebut) {
-                // Calculer le nombre de jours entre la date de début et la date de fin
+
                 const diffTime = dateFin - dateDebut;
                 const diffDays = diffTime / (1000 * 3600 * 24);
 
                 if (diffDays >= 1) {
-                    // Calculer le montant total
+
                     const montantTotal = chambreData.prix * diffDays;
-                    montantTotalElement.textContent = montantTotal.toFixed(2); // Afficher le montant total
+                    montantTotalElement.textContent = montantTotal.toFixed(2);
                 } else {
-                    montantTotalElement.textContent = '0'; // Si la période est trop courte
+                    montantTotalElement.textContent = '0';
                 }
             }
         }
@@ -279,7 +297,7 @@
             // Mise à jour des informations du modal
             chambreModal.querySelector('#chambre_numero').textContent = 'Chambre N° ' + chambreData.numero;
             chambreModal.querySelector('#chambre_description').textContent = chambreData.description;
-            chambreModal.querySelector('#chambre_prix').textContent = chambreData.prix ;
+            chambreModal.querySelector('#chambre_prix').textContent = chambreData.prix;
             chambreModal.querySelector('#chambre_image').src = chambreData.image;
         });
 
@@ -299,13 +317,10 @@
             reservationModal.querySelector('#reservation_chambre_numero').textContent = chambreData.numero;
             reservationModal.querySelector('#reservation_chambre_prix').textContent = chambreData.prix + ' MAD';
 
-            // Réinitialisation du montant total à chaque ouverture de la modal
             montantTotalElement.textContent = '0';
 
-            // Mettre à jour les prix par nuit
             prixParNuitElement.textContent = chambreData.prix + ' MAD';
 
-            // Ajouter un événement sur les dates pour calculer le montant total
             dateDebutInput.addEventListener('change', calculerMontantTotal);
             dateFinInput.addEventListener('change', calculerMontantTotal);
         });
