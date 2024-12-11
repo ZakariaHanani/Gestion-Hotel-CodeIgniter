@@ -4,7 +4,6 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-//$routes->get('/', 'Home::index');
 $routes->get('/register', 'AuthController::register');
 $routes->post('/store', 'AuthController::store');
 $routes->get('/client', 'AjouterClient::index');
@@ -21,6 +20,7 @@ $routes->get('payment/success', 'Client\PaymentController::success');
 $routes->get('payment/cancel', 'Client\PaymentController::cancel');
 $routes->get('/', 'Client\ChambreController::index');
 $routes->get('client/MesReservation','Client\ClientController::mesReservations');
+$routes->post('contact/send', 'Client\Contact::send');
 $routes->set404Override(
     function () use ($routes) {
         return view('Client/errors/error_404');
